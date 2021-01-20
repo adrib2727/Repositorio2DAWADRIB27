@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        marca{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 2. Crear una página web que contenga mucho texto, crear una aplicación que busque una palabra escrita por el usuario (prompt).
+    La aplicación hará un scroll hacia la palabra y esta aparecerá remarcada. Usar el objeto Window, que lo hace todo. -->
+
+    <h1>Página con mucho texto</h1>
+    <p id="parr1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolore.
+    </p>
+    <script>
+        var entrada = prompt("Escribe");
+        var elemento = document.getElementsByTagName("p")[0];
+
+        let array = elemento.innerHTML.split(" "); //Formación de array.
+        let pos = 0;
+
+        do{
+            pos = array.indexOf(entrada, pos);
+            array[pos] = "<marca>"+ array[pos] + "</marca>";
+            pos++;
+        }while(pos > 0){
+            array = elemento.innerHTML = array.join(" ");
+        }
+       
+        
+
+        
+    
+    </script>
+</body>
+
+</html>

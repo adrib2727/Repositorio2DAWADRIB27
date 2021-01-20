@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericicio 4</title>
+</head>
+<body>
+    <script>
+
+        /*Programa que declare un vector de diez elementos enteros y pida números para rellenarlo
+            hasta que se llene el vector o se introduzca un número negativo. Entonces se debe imprimir
+            el vector (sólo los elementos introducidos)*/
+        const cadena1 = [];
+        let entrada;
+        let cont = 0;
+        let seguir = true;
+
+        while(cont < 10 && seguir){
+            entrada = prompt("Introduce las notas (Del 1 al 10)");
+            if(!isNaN(entrada)){
+                if(entrada > 0){
+                    cadena1.push(entrada); 
+                    cont++;
+                }
+                else{
+                    seguir = false; //Para el bucle
+                }
+            }
+        }
+        document.write(cadena1);
+    </script>
+</body>
+</html>

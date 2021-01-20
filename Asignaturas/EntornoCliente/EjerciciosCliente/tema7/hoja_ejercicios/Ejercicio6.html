@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="cuerpo">
+    <!-- Hacer un array y meter los p en cada posición del array, primero hacer un array vacío
+    meter los datos con un push. Después borrar y usar el setInterval para que las letras vayan apareciendo poco a poco. -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam?</p>
+    <p>Dolores provident dolorem accusantium maiores aliquid voluptates quo ipsum illum.</p>
+    <p>Magni, id molestias exercitationem est assumenda cumque necessitatibus provident voluptatem?</p>
+    <p>Aperiam, a officiis minus odio cumque explicabo et porro? Odio.</p>
+    <p>Laudantium incidunt voluptates deleniti obcaecati numquam, eum error saepe dolore?</p>
+
+    <script>
+        var parrafos_js = document.querySelectorAll("p"); //Variable que tiene en cuenta los p.
+        var padre_js = document.getElementById("cuerpo"); //Variable que coge el id del body.
+        var array_p = []; //Array de los p.
+
+        //Bucle que recorre la variable parrafos_js.
+        for(let p of parrafos_js){
+            array_p.push(p); //Metes los parrafos en el array.
+            padre_js.removeChild(p); //Remove CHILD: Tienes que seleccionar el padre y decirle que borre sus hijos; es decir, los p.
+        }
+
+        //Va a ejecutar a una función cuando pasen dos segundos.
+        var tiempo = setInterval(() => {
+            if(array_p.length === 0){
+                clearInterval(tiempo);
+            }else{
+                padre_js.appendChild(array_p.pop()); 
+            }   
+        }, 2000);
+
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones</title>
+    <style>
+        div{
+            height: 100px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 5px 0px 5px 0px;
+            padding: 5px;
+            float: left;
+        }
+        .escalar:hover{
+            transform: scale(0.5);
+        }
+        .trasladar:hover{
+            transform: translate(10px, 20px);
+        }
+        .rotar:hover{
+            transform: rotate(45deg);
+        }
+        .sesgar:hover{
+            transform: skew(5deg, 10deg);
+        }
+        .matrix:hover{
+            transform: matrix(2.3,0.1,2.5,1,7,4);
+        }
+        .cambiar_punto:hover{
+            transform: rotate(-10deg);
+            transform-origin: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="escalar">Escalar</div>
+    <div class="trasladar">Trasladar</div>
+    <div class="rotar">Rotar</div>
+    <div class="sesgar">Sesgar</div>
+    <div class="matrix">Matrix</div>
+    <div class="cambiar_punto"></div>
+</body>
+</html>

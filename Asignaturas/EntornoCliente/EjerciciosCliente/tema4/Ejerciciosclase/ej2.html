@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Hacer una página web que cuente las vocales de una frase introducida por el teclado-->
+    <script>
+        var entrada1;
+        var contador = 0;
+
+        entrada1 = prompt("Escribe una frase");
+
+        for(let posicion = 0; posicion <= entrada1.length; posicion++){
+            if(entrada1.charAt(posicion) == "a" || entrada1)
+            {
+                contador++;
+            }
+        }
+        
+        document.write(contador);
+    </script>
+</body>
+</html>

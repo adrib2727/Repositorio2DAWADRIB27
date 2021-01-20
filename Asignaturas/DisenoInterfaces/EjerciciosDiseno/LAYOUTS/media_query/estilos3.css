@@ -1,0 +1,12 @@
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenido{
+    width: 99%;
+}
+/*@media (orientation: portrait) and (max-width: ){
+    .contenido{
+        width: 99%;
+    }
+}*/

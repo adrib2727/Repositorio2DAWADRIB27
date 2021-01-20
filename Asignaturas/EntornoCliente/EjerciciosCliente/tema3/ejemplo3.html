@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position:fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var c1 = Math.round(Math.random()*255);
+        var c2 = Math.round(Math.random()*255);
+        var c3 = Math.round(Math.random()*255);
+
+        /*Metes dentro del Script la parte HTML que retoca el fondo*/
+        document.write('<div style = "background-color: rgb(',c1,',',c2,',',c3,')"></div>');
+    </script>
+    <h1>
+        Ejemplo
+    </h1>
+    </div>
+</body>
+</html>

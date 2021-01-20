@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="s1">
+        <h1 id="titulo">El título</h1>
+        <p id="parrafo1">Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Fugit, sapiente.</p>
+        <p id="parrafo2">Lorem ipsum, dolor sit amet consectetur adipisicing <strong>elit</strong>. Consectetur, a.</p>
+        <p id="parrafo3">Lorem ipsum dolor, sitamet consectetur adipisicing elit. Natus, magni!</p>
+    </section>
+    <script>
+        let seccion = document.getElementById("s1");
+
+        for(let hijo of seccion.childNodes){
+            document.write(`Texto: ${hijo.nodeValue}, tipo de nodo: ${hijo.nodeType}, nombre: ${hijo.nodeName}<br>`);
+        }
+
+        document.write("<br>");
+
+        for(let hijo of seccion.children){
+            document.write(`Texto: ${hijo.nodeValue}, tipo de nodo: ${hijo.nodeType}, nombre: ${hijo.nodeName}<br>`);
+            document.write(`<br> Un contenido ${hijo.innerHTML}`);
+        }
+
+
+
+        let s = document.getElementById("s2");
+        document.write(s.innerHTML," ", s.parentNode.innerHTML);
+
+        s.parentNode.parentNode.firstElementChild.nextElementSibling; 
+
+        let nuevoP = document.createElement("p");
+        nuevoP.innerHTML = "Ricardo";
+        nuevoP.setAttribute("id", "parrafo4");
+
+        let seccion = document.getElementById("s1");
+        seccion.appendChild(nuevoP);
+
+        seccion.insertBefore(nuevoP, document.getElementById("parrafo2"));
+
+        seccion.replaceChild(nuevoP, document.getElementById("parrafo2"));
+        seccion.removeChild(document.getElementsByTagName("p")[2]); 
+
+        var id_reloj = setTimeout(()=>alert("Termina pronto"), 2000);
+        clearTimeout(id_reloj);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenido{
+            display:flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            height:400px;
+            border: 1px solid black;
+            justify-content: space-between;
+            align-items:flex-start;
+        }
+        .Hijos{
+            height: 100px;
+            width: 100px;
+            background-color: orange;
+            margin-left: 2px;
+        }
+        #uno{
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenido">
+        <div class="Hijos">1</div>
+        <div id="uno" class="Hijos">2</div>
+        <div class="Hijos">3</div>
+        <div class="Hijos">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 50px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <p id="libro" data-tipo="Inicio del libro" data-libro="Don Quijote">
+
+        </p>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <button id="clickar"></button>
+        <div id="primero">
+            Lorem ipsum dolor sit amet consectetur<strong>porro</strong> adipisicing elit. Beatae rem maxime repellat eius voluptas 
+            autem et nemo repellendus similique 
+            temporibus. Magni autem vitae suscipit et. Nihil fugit sapiente quibusdam neque?
+        </div>
+        <div id="segundo">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum ipsam tempora 
+            neque necessitatibus ullam ducimus nisi esse atque 
+            maiores incidunt voluptas, quae quam? Rerum beatae adipisci eos atque quaerat!
+        </div>
+    </div>
+    <script>
+        /*let cabecera2 = document.querySelectorAll(".segundo .primero");
+        //document.write(cabecera2[0].className);
+
+        /*for(clase of cabecera2[0].className){
+            document.write(clase, "<br>");
+        }*/
+        /*cabecera2[0].classList.add("moto");
+        cabecera2[0].classList.remove("coche");
+        cabecera2[0].classList.toggle("coche");*/
+
+        /*document.write(cabecera2[0].classList.contains("Moto"));
+        cabecera2[0].classList.replace("clase_a_quitar", "clase_a_reemplazar");
+
+        document.write(document.getElementById("Libro").dataset.tipo);*/
+
+        /*Eventos*/
+        let parrafo = document.getElementById("segundo");
+        document.getElementById("clickar").addEventListener("click",() => {
+            parrafo.innerHTML = "Esto es nuevo";
+        });
+    </script>
+</body>
+</html>

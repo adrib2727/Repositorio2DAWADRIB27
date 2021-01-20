@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #menu{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100px;
+        }
+        #menu li{
+            display: inline;
+            border: 1px solid blue;
+            background-color: #E5CCFF;
+        }
+
+        #enlaces ul li{
+            background-color: pink;
+        }
+        #enlaces ul li a{
+            text-decoration: none;
+        }
+        #menu li ul{
+            list-style: none;
+            visibility: hidden;
+            display: none;
+        }
+        #enlaces:hover ul{
+            visibility: visible;
+            display: block;
+        }
+        #enlaces ul{
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li>Inicio</li>
+        <li id="enlaces">Enlaces
+            <ul>
+                <li><a href="#">Web 1</a></li>
+                <li><a href="#">Web 2</a></li>
+                <li><a href="#">Web 3</a></li>
+                <li><a href="#">Web 4</a></li>
+            </ul>
+        </li>
+        <li>Foros</li>
+        <li>Descargas
+            <ul>
+                <li><a href="#">Descarga</a></li>
+                <li><a href="#">Descarga</a></li>
+                <li><a href="#">Descarga</a></li>
+            </ul>
+        </li>
+        <li>Contactos</li>
+        <li>Otras cosas</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego adivinar número</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <h1>Juego de adivinar número</h1>
+    <!--<label for="numero"></label>
+    <input id="numero" type="text" placeholder="Introduce un número"></input>
+    <button>Adivinar</button><br><br>
+    <button>Cancelar</button>-->
+
+    <script>
+        var aleatorio = Math.round(Math.random(aleatorio)*100);
+        num_introd = prompt("Introduce el número");
+
+        var intentos = 0;
+        var cancelar = undefined;
+
+        document.write("Números introducidos: ");
+        document.write(num_introd+" ");
+
+        //En cuanto los intentos superen el 10 y se acierte el número, el bucle sale.
+        while(intentos <= 10 && num_introd != aleatorio) 
+        {
+            //La variable num_introd toma otro valor.
+            num_introd = prompt("Vuelve a intentarlo, introduce un número");
+            document.write(num_introd+" ");
+            intentos++;
+        }
+
+        if(num_introd == aleatorio)
+        {
+            document.write("<br>");
+            document.write("¡Felicidades, ha adivinado el número! "+aleatorio);
+            document.write("Estos han sido los intentos: ");
+        }
+        else
+        {
+            document.write("<br>");
+            document.write("<br>");
+            document.write("Lo sentimos, se han acabado los intentos.");
+            document.write("<br>");
+            document.write("Estos han sido los intentos: ");
+        }
+
+        //Mostrar datos.
+        while(num_introd != aleatorio)
+        {
+            document.write("<br>");
+            document.write(num_introd);
+            document.write("<br>");
+            num_introd++;
+        }
+    </script>
+</body>
+</html>

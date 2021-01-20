@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:hover{
+            /*transition: all 0.5s ease 0s; /*A que elementos de abajo le quiero aplicar la transición*/
+            transition-property:font-size, color;
+            transition-duration: 3s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+            font-size: 26pt;
+            color: lime;
+            font-weight: bold;
+        }
+        
+        div{
+            border: 1px solid gray;
+            margin: 2px;
+        }
+        .ease:hover{
+            transition: all 3s ease 0s;
+            height: 50px;
+            margin: 10px;
+            background-color: cadetblue;
+            border: 5px solid chocolate;
+            box-shadow: 3px 3px 3px mediumvioletred;
+        }
+        .linear:hover{
+            transition: all 5s linear 0s;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            height: 200px;
+            width: 400px;
+            margin: 0px auto;
+            z-index: 10;
+            background-color: cadetblue;
+            border: 2px solid black;
+            box-shadow: 3px 3px 3px slategray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Transiciones CSS</h1>
+    <p>Lorem ipsum dolor sit amet.<a href="#">Principal</a></p>
+    <div class="ease">Div ease transición</div>
+    <div class="linear">Div linear</div>
+</body>
+</html>

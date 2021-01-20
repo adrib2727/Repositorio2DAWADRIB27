@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Función que le pases el array y te diga cuántos son pares.*/
+        /*const numeros = [3,45,2,65,87,4,13];
+    
+        function NumerosPares(valor){
+
+            let cont = 0;
+            for(e of valor){ //Recorre el array
+                if((e % 2) == 0){
+                    cont++;
+                }
+            }
+            return cont;
+        }
+        document.write(NumerosPares(numeros));*/
+
+        /*const numeros = [3,45,2,65,87,4,13];
+        var myfuncion;
+    
+        function tripleV(valor){
+            return v*3;
+        }
+        myfuncion = tripleV;
+        document.write(myfuncion(4));*/
+
+        /*Función que me pase un array y devuelva otro array con todos sus elementos con el triple de valor.*/
+
+        const numeros = [1,2,3,4,5,6,7,8,9,10];
+
+        triple = function(v){
+            return v*3;
+        }
+        doble = function(v){
+            return v*2;
+        }
+
+        function Multiplicador(a, f){ //f referencia cualquiera de las funciones.
+            const num = []
+
+            for(e of a){ //e recorre a (Que es la referencia del array números.).
+                num.unshift(f(e)); //Introduce al principio del nuevo array 
+            }
+            return num;
+        }
+        document.writeln(Multiplicador(numeros, doble)); //Llama a la función normal y la doble.
+        document.writeln(Multiplicador(numeros, triple)); //Llama a la función normal y la triple
+ </script>
+</body>
+</html>

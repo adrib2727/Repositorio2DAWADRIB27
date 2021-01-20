@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="TipoPais">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="ES"></xs:enumeration>
+            <xs:enumeration value="PR"></xs:enumeration>
+            <xs:enumeration value="FR"></xs:enumeration>
+            <xs:enumeration value="AN"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="Planeta"></xs:element>
+    <xs:element name="pais" type="TipoPais"/>
+</xs:schema>

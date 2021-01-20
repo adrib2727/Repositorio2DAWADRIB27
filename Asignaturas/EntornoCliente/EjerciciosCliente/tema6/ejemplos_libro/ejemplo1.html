@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declarar prototipo</title>
+</head>
+<body>
+    <script>
+        function Poligono_regular(lados, nombre){
+            this.lados = lados;
+            this.nombre = nombre;
+            this.mostrarInfo = () => `Soy un ${this.nombre} y tengo ${this.lados} lados \n`;
+        }
+
+        //Instancias de los objetos de Polígono_regular.
+        let a = new Poligono_regular(4, "Cuadrado");
+        let b = new Poligono_regular(3, "Triángulo");
+
+        console.log(a instanceof Poligono_regular);//TRUE, porque a representa una instancia de la clase.
+        console.log(a instanceof String);//FALSE, porque a no representa una cadena.
+
+        console.log(a.__proto__);//Referencia el objeto guardado en la variable a.
+
+    </script>
+</body>
+</html>

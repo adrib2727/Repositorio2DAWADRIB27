@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Juego de adivinar un número*/
+        var entrada = prompt("Introduce números de 1 a 50");
+        var aleatorio = Math.round(Math.random*50);
+        var contador = 0;
+
+        while(entrada < 10 && entrada != undefined && entrada != ""){
+            entrada = prompt("Introduce números de 1 a 50");
+            if(entrada == aleatorio){
+                document.write("Felicidades, has acertado el número"+entrada);
+            }else{
+                alert("Vuelve a intentarlo");
+            }
+        }
+
+        if(entrada == undefined){
+            document.write("Has pulsado cancelar.");
+            document.write("Los números que has introducido son: ");
+            for(let a=0; a<entrada; a++){
+                document.write(a);
+            }
+        } 
+        else if(entrada == ""){
+            document.write("No has introduucido nada.");
+            document.write("Los números que has introducido son: ");
+            for(let b=0; b<entrada; b++){
+                document.write(b);
+            }
+        }
+        else{
+            document.write("Has perdido mierdas, aqui están los datos.");
+            for(let c=0; c<entrada; c++){
+                document.write(c);
+            }
+        }
+
+    </script>
+</body>
+</html>

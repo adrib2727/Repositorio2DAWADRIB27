@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <h1>Juego del Ahorcado</h1>
+    <!--
+        1. Crear array con las palabras que se van a haber.
+        2. Sacar una palabra aleatoria a través de un bucle.
+        3. Crear un bucle que me vaya convirtiendo las palabras por subrayados y me la muestre.
+    -->
+    <script>
+        const Palabras = ["ordenador", "silla", "pizarra", "proyector", "mesa", "puerta"];
+        var PalabraMostr = []; //Array donde meteremos la nueva palabra dividida.
+        var PalOculta = []; //Array donde se muestra la palabra oculta dividida y convertida en comas.
+
+        var posAleatoria;
+        var palAleatoria;
+        var palabra;
+
+        for(let ind of Palabras){ //Recorre todo el array.
+            posAleatoria = Math.floor(Math.random() * Palabras.length); //Saca posición aleatoria.
+        }
+
+        palAleatoria = Palabras[posAleatoria]; //Para que coja la palabra en vez de la posición.
+        palabra = palAleatoria.split(""); //Esto es lo que hace que la palabra sea iterable.
+
+        //Bucle que me mustre la palabra en caracteres sin sustituir por barras BAJAS
+        for(let letra of palabra){
+            PalabraMostr.push(letra);
+        }
+
+        //Bucle que me muestra la palabra en caracteres sustituida por BARRAS BAJAS.
+        for(let letra of palabra){
+            PalOculta.push(" _ ");
+        }
+
+        document.write(PalOculta);
+        console.log(PalabraMostr); //Muestra la solución de la palabra en la consola.
+
+        /*----------------------------------------------------------------------------------------------*/
+        /*----------------------------------------------------------------------------------------------*/
+        var elemento; //Variable del prompt.
+
+        for(let intentos = 0; intentos < 6; intentos++){ //Se van controlando los intentos.
+            elemento = prompt("Introduce una letra");
+            while(PalabraMostr.indexOf(elemento) != -1){
+                PalOculta.push();
+            }
+        }
+
+    </script>
+</body>
+</html>

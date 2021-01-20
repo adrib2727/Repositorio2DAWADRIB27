@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 1</title>
+</head>
+<body>
+    <label for="nombre1"></label>
+    <input type="text" id="nombre1">
+    <button id="">Añadir</button>
+    <button id="boton2">Añadir 2</button>
+    <button id="boton3">añadir 3</button>
+    <div class="lista">
+        <ul id="listaAnadir">
+            <li>Primero</li>
+        </ul>
+    </div>
+    <script>
+        let boton2 = document.getElementById("boton2");
+        //Función que con el onclick ejecuta el siguiente evento
+        boton2.onclick = () => {
+            let nuevo = document.createElement("li");
+            nuevo.innerHTML = document.getElementById("nombre1").value;
+            document.getElementById("listaAnadir").appendChild(nuevo);
+        }
+        //Fin del botón 2.
+        let boton3 = document.getElementById("boton3");
+
+        //Botón 3
+        function anadirElemento(){
+            let nuevo = document.createElement("li");
+            nuevo.innerHTML = document.getElementById("nombre1").value;
+            document.getElementById("listaAnadir").appendChild(nuevo);
+        }
+        //Añade elemento a través del evento del click.
+        boton3.addEventListener("click", anadirElemento);
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Discográfico</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">  
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap" rel="stylesheet">    
+    <style>
+        body{
+            background-color: #696565;
+        }
+        .titulo{
+            color: white;
+            text-align: center;
+            margin-top: 10%;
+            font-family:'Cabin', sans-serif;
+            font-size: x-large;
+        }
+        .pestana_login{
+            border-radius: 10px;
+            background-color: white;
+            border: 1px solid black;
+            font-family: 'Libre Franklin', sans-serif;
+            margin-right: 25%;
+            margin-left: 25%;
+        }
+        .pestana_login h3{
+            text-align: center;
+            color: black;
+        }
+        #formulario{
+            margin-left: 5%;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        #formulario input{
+            height: 30px;
+        }
+        #usuario{
+            width: 40%;
+        }
+        #contrasena{
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <div class="titulo">
+        <h1>Gestor Discográfico</h1>
+    </div>
+    <div class="pestana_login">
+        <h3>Acceso corporativo</h3>
+        <div id="formulario">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" placeholder="Introduce el usuario"><br><br>
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" placeholder="Introduce la contraseña">
+        </div>
+    </div>
+</body>
+</html>

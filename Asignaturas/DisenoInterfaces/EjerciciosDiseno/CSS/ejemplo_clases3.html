@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            width: 25%;
+            border-bottom: 1px solid red;
+        }
+        ul li:first-child{
+            background-color: bisque;
+        }
+        ol a{
+            text-decoration: none;
+        }
+        ol li:nth-child(2){
+            background-color: red;
+            color: black;
+        }
+        ol li{
+            display:incline;
+        }
+        ol li:nth-child(even){
+            background-color: red;
+            color:black;
+        }
+        
+        ol li:nth-child(odd){
+            background-color: yellow;
+            color: whitesmoke;            
+        }
+        ol li:hover{
+            border-top:2px solid orange;
+            border-bottom: none;
+            background-color: violet;
+            color:gold;
+            font-size: 1.5em; 
+        }
+        ol li:active{
+            border-left:3px solid orange;
+            border-bottom: none;
+            margin-top: 15%;
+            cursor:crosshair;
+
+            background-color: olivedrab;
+            color: darkblue;
+        }
+        .columnas{
+            column-count: 3;
+            column-gap: 2em;
+            column-rule: thin dotted #121212;
+            text-transform: uppercase;
+            font-weight: lighter;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+    </ul>
+
+    <ol>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+        <li><a href="">Texto</a></li>
+    </ol>
+
+    <div>
+        <p class="columnas">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima aspernatur inventore 
+            quaerat doloremque cupiditate praesentium deserunt neque, 
+            ullam eaque cum quas natus veritatis eligendi voluptatibus amet, eos eveniet iusto odit!
+        </p>
+    </div>
+
+</body>
+</html>

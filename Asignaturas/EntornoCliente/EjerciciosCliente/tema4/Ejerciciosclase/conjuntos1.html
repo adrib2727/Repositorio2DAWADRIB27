@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let conjunto = new Set([11, 14, 12]);
+
+        //conjunto.add(x).add(y).add(z); OTRA FORMA DE HACERLO
+        conjunto.add(4);
+        conjunto.add(5);
+        conjunto.add(4);
+        conjunto.add(3);
+
+        console.log(conjunto);
+
+        for(let numero of conjunto){
+            console.log(numero);
+        }
+        console.log("Hay: ",conjunto.size);
+        conjunto.delete(11);
+        console.log(conjunto);
+
+        console.log(conjunto.has(5));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Función que representa la clase vehiculos*/
+        function Vehiculos(marca, modelo, matricula, color = "blanco", cilindrada = 1600){
+            /*Posibles valores que pueden tomar los objetos, el resto siempre por defecto*/
+            var Marca = ["seat", "citroen", "volkswagen", "ford"];
+            var Modelo = ["ateca", "aircross", "touran", "escort"];
+            var Matricula = ["AS-1234", "SA-5432", "DE-4938", "RT-5493"];
+
+            /*Comprobación de los datos que se introducen más adelante*/
+            this.color = color;
+            this.cilindrada = cilindrada;
+            Marca.includes(marca) ? this.marca = marca : null;
+            Modelo.includes(modelo) ? this.modelo = modelo : null;
+            Matricula.includes(matricula) ? this.matricula = matricula : null;
+            
+
+            /*Métodos*/
+            /*Método toString*/
+            this.mostrar = () => `Este coche cuenta con la marca: ${this.marca}, el modelo: ${this.modelo},
+            la matrícula: ${this.matricula}, el color: ${this.color} y la cilindrada: ${this.cilindrada}`;
+
+            /*---------------------------------------------------------------------------------*/
+
+            /*Función que me saca una matricula aleatoria*/
+            this.matriculaAleatoria = () => {
+                const matr_aleatoria = ["FG-3235", "JH-0983", "YU-4392", "GS-1293"]
+                var ale1 = Math.round(Math.random()*matr_aleatoria.length);
+                return matr_aleatoria[ale1];
+            }
+            /*Función que me saca un color aleatorio*/
+            this.colorAleatorio = () => {
+                const color_aleatorio = ["rosa", "verde", "rojo", "azul"]
+                var ale2 = Math.round(Math.random()*color_aleatorio.length);
+                return color_aleatorio[ale2];
+            }
+
+            /*---------------------------------------------------------------------------------*/
+            /*Rematricular coche, coge una matricula aleatoria y la pone en lugar de la otra*/
+            this.rematricular = function(){
+                var nuevaMatr = this.matriculaAleatoria();
+                Matricula.includes(matricula) ? this.matricula = nuevaMatr : null;
+                return this.matricula;
+            }
+
+            /*Repintar coche*/
+            this.repintar = function(){
+                var nuevoColor = this.matriculaAleatoria();
+                Matricula.includes(color) ? this.color = nuevoColor : null;
+                return this.color;
+            }
+        }
+
+        /*PARTE DOS*/
+
+        function Coches(plazas = 5, maletero){
+            this.coches = [];
+
+            this.crearCoche = function(){
+                for(let ind of this.coches){
+
+                }
+            }
+        }
+
+        function Motos(tiempos = 4){
+
+        }
+
+
+        /*PARTE TRES*/
+
+        function Garaje(){
+
+            this.anadir = function(){
+
+            }
+
+            this.esta = function(){
+
+            }
+
+            this.sacar = function(){
+
+            }
+        }
+
+        /*Comprobador de vehiculos ESTE MÉTODO MUESTRA TODO PORQUE TODO ES CORRECTO*/
+        var compr1 = new Vehiculos("seat", "ateca", "SA-5432");
+        console.log(compr1);
+
+
+        var mostrar = compr1.mostrar();
+
+        /*Comprobador de vehiculos COMO LA MARCA NO ES LA QUE HEMOS ESTABLECIDO, no lo crea*/
+        var compr2 = new Vehiculos("lamborghini", "ateca", "SA-5432");
+        console.log(compr2);
+
+        /*Comprobador de RE-MATRICULAR*/
+        
+        console.log(compr1.rematricular());
+        console.log(compr1.repintar());
+
+    </script>
+</body>
+</html>

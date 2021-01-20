@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos tipo punto</title>
+</head>
+<body>
+    <script>
+        
+
+        //Definición de la clase.
+        function Distancias(ejex, ejey){
+            this.ejex = ejex;
+            this.ejey = ejey;
+            this.mostrar=()=> `El eje x vale ${this.ejex} y el eje y vale ${this.ejey} \n`;
+        }
+
+        Distancias.prototype.EsNumero = function(){
+            let a;
+            if((isNaN(this.ejex && this.ejex == "")||(isNaN(this.ejey) && this.ejey == ""))){
+                a = new Distancias(0,0);
+            }
+            return a;
+        }
+
+        Distancias.prototype.Mover = function(x, y){
+            let intrx = prompt("Introduce las nuevas coordenadas de x");
+            let intry = propmt("Introduce las nuevas coordenadas de y");
+
+            
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cabecera{
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 1em;
+    margin: 0 auto 0 auto; /*En este caso el auto es un 5%*/
+    background: linear-gradient(to left,#ffffff,darkgrey, #ffffff 100%);
+    color: black;
+    border: 1px solid grey;
+    float: left;
+}
+.cabecera h1{
+    margin-left: 10px;
+}
+.cabecera label{
+    margin: 10px;
+}
+.cabecera a{
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    border: 1px solid rgb(60,60,60);
+    color: black;
+    background: linear-gradient(to left,#ffffff,darkgrey, #ffffff 100%);
+    box-shadow: 2px 2px 5px gray;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+@keyframes rotar_img{
+    form{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.cabecera img{
+    position: absolute;
+    margin-left: 20px;
+    top: 3%;
+    left: 70%;
+    border: 1px solid black;
+    border-radius: 8px;
+    animation: rotar_img 4s infinite ease-in 4s;
+}
+.centro{
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 1em;
+    margin: 0 auto 0 auto; /*En este caso el auto es un 5%*/
+    color: black;
+    border: 1px solid grey;
+    float: left;
+    height: 530px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: url("https://estaticos.muyinteresante.es/media/cache/1140x_thumb/uploads/images/gallery/5e4169235cafe8bf44264d7a/winer.jpg") left no-repeat;
+    background: url("https://www.quo.es/wp-content/uploads/2019/10/paisajes-maravillosos.jpg") right;
+}
+.centro p{
+    color: white;
+}
+.pie{
+    border-radius: 10px;
+    width: 100%;
+    padding-bottom: 1em;
+    background: radial-gradient(orangered 40%, yellow, black);
+    color: black;
+    border: 1px solid grey;
+    float: left;
+}
+.pie img{
+    height: 160px;
+    width: 160px;
+}
+.pie img:hover{
+    transition: all 1s ease 0s;
+    height: 200px;
+
+}

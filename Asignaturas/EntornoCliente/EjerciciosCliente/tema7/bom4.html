@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="principal">
+        <h1>Lorem ipsum dolor sit.</h1>
+        <h2>Lorem ipsum dolor sit.</h2>
+        <div id="primero">
+            Lorem ipsum dolor sit amet consectetur<strong>porro</strong> adipisicing elit. Beatae rem maxime repellat eius voluptas 
+            autem et nemo repellendus similique 
+            temporibus. Magni autem vitae suscipit et. Nihil fugit sapiente quibusdam neque?
+        </div>
+        <div id="segundo">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum ipsam tempora 
+            neque necessitatibus ullam ducimus nisi esse atque 
+            maiores incidunt voluptas, quae quam? Rerum beatae adipisci eos atque quaerat!
+        </div>
+    </div>
+    <script>
+        console.log(document.getElementById("primero").textContent);
+        document.getElementById("primero").textContent = "Nuevo <strong>texto</strong>que";
+        console.log(document.getElementById("segundo").innerHTML);
+        document.getElementById("segundo").innerHTML = ""
+    </script>
+</body>
+</html>

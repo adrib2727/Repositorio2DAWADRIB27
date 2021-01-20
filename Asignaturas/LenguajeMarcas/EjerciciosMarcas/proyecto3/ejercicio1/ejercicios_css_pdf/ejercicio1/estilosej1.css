@@ -1,0 +1,99 @@
+body{
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.documento{
+    border: 2px solid black;
+}
+.autora{
+    text-align: right;
+}
+.titulo{
+    text-align: center;
+}
+#imagcoment{
+    float: right;
+    margin-right: 1%;
+}
+#fotoxml{
+    float: right;
+    height: 8%;
+    width: 8%;
+    border: 2px solid black;
+    margin-right: 1%;
+}
+#fotoandorid{
+    float: left;
+    height: 8%;
+    width: 8%;
+    border: 2px solid black;
+}
+.pa1{
+    float: left;
+}
+.pa1 p{
+    margin-left: 1%;
+}
+#parrafo1::first-letter{
+    font-size: 50px;
+}
+#parrafo2::first-letter{
+    font-size: 50px;
+}
+#linux{
+    font-weight: bold;
+}
+#google{
+    font-weight: bold;
+}
+#xml{
+    font-weight: bold;
+}
+#parrafo2::first-letter{
+    font-size: x-large;
+}
+#gm{
+    font-weight: bold;
+    font-style: italic;
+}
+#tt{
+    font-weight: bold;
+    font-style: italic;
+}
+#sp{
+    font-weight: bold;
+    font-style: italic;
+}
+#ki{
+    font-weight: bold;
+    font-style: italic;
+}
+#sk{
+    font-weight: bold;
+    font-style: italic;
+}
+#an{
+    font-weight: bold;
+    font-style: italic;
+}
+#flt{
+    font-weight: bold;
+    font-style: italic;
+}
+#pics{
+    font-weight: bold;
+    font-style: italic;
+}
+#tdt{
+    font-weight: bold;
+    font-style: italic;
+}
+#widget{
+    font-weight: bold;
+    font-style: italic;
+}
+.linea{
+    border: 1px solid black;
+    margin-right: 20px;
+    margin-left: 20px;
+}

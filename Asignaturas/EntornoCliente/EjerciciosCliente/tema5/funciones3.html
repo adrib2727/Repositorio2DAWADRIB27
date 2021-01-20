@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* //Manera 1
+        var triple;
+
+        function miFuncion(b){
+            return Math.pow(b,3);
+        }
+        triple = miFuncion;
+        console.log(triple(3))
+
+
+        //Manera 2
+        const triple2 = function(b){
+            return Math.pow(b,3);
+        }
+        console.log(triple2(2));
+
+
+        //Manera 3
+        const triple3 = c => Math.pow(c,3);
+        console.log(triple3(5));
+
+        //Maneta 4 
+        const saluda1=()=>console.log("Hola");
+
+        //Manera 5
+        const saluda2 = function(){
+            console.log("Hola");
+        }*/
+    </script>
+    <script>
+        /*Hacer función flecha que sirva para devolver verdadero si es par y falso si es impar.
+        Asignar función a una variable y probar varios ejemplos*/
+        var bol = false;
+        var entrada = prompt("Introduce un número");
+        var par0 = entrada => {
+            if(entrada%2==0){
+                bol = true;
+            }
+            return bol;
+        }
+
+        //Otras formas de hacerlo:
+        var par =c=> !(c%2);
+
+        //Otra forma de hacerlo:
+        var par1=c=>c%2 ? true : false;
+
+        //Otra forma de hacerlo: 
+        var par2=c=>c%2==0;
+    </script>
+    <script>
+        var x;
+        function madia(x,y,...mas){
+            
+        }
+    </script>
+</body>
+</html>

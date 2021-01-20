@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradientes</title>
+    <style>
+        div{
+            float: left;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 3px;
+            margin-left: 3px;
+            text-align: center;
+        }
+        #primero{
+            background: linear-gradient(0deg, red 0%, yellow 50%, purple 100%);
+        }
+        #segundo{
+            background: linear-gradient(to left, blue, red, orange);
+        }
+        #tercero{
+            background: radial-gradient(orangered 40%, yellow, black);
+        }
+        #cuarto{
+            background: repeating-linear-gradient(45deg,red 5px, orange 10px, blue 15px),
+                repeating-linear-gradient(90deg, transparent, orange 10px, blue 20px);
+        }
+        #botton{
+            margin-top: 30px;
+            background-color: #DA2929;
+            color: #FFFFFF;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px #000000;
+            text-shadow: 2px 2px 4px #000000;
+            border: 1px solid black;
+        }
+        #botton:active{
+            box-shadow: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="primero">
+        1
+    </div>
+    <div id="segundo">
+        2
+    </div>
+    <div id="tercero">
+        3
+    </div>
+    <div id="cuarto">
+        4
+    </div>
+    <div>
+        5
+    </div>
+    
+    <h1>Botón hacia YT</h1>
+    <a id="botton" href="www.google.es">Botón</a>
+</body>
+</html>

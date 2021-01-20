@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function escribir(x,accion){
+            console.log(accion(x));
+        }
+        function doble(y){
+            y+y;
+        }
+
+        escribir(5, doble);
+
+        escribir(4, function(y){
+            return y/2;
+        });
+
+        escribir(5, y=>y*y); //Función flecha.
+    </script>
+</body>
+</html>

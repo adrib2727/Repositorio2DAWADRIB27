@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Planeta xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="arch5_3.xsd">>
+    <salario>12354.23</salario>
+</Planeta>

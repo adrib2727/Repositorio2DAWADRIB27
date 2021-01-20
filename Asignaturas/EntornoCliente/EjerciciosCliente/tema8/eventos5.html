@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 5</title>
+    <style>
+        #centro{
+            position: absolute;
+            top: 25%;
+            border: 1px solid black;
+            margin-left: 25%;
+            margin-right: 25%;
+            height: 50%;
+            width: 50%;
+            background-color: lightgreen;
+            z-index: 1;
+        }
+        #cartel{
+            position: absolute;
+            background-color: paleturquoise;
+            padding: 1em;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <p id="info">Info</p>
+    <div id="centro"></div>
+    <div id="cartel"></div>
+    <script>
+        let centro = document.getElementById("centro");
+        centro.addEventListener("mousemove", (e) => {
+            let info = document.getElementById("info").innerHTML = `X: ${e.clientX} Y: ${e.clientY}`;
+
+            cartel.style.left = e.clientX + "px";
+            cartel.style.top = e.clientY + "px";
+            cartel.innerHTML = `X: ${e.clientX} Y: ${e.clientY}`;
+        });
+
+        centro.addEventListener("mouseleave", (e) => {
+            let cartel = document.getElementById("cartel");
+            carte.style.display = "none";
+        });
+    </script>
+</body>
+</html>

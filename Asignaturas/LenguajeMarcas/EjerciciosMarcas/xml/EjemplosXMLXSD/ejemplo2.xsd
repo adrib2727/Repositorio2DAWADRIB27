@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="TipoTemperatura" mixed="true">
+        <xs:attribute name="escale" type="TiposTemperatura"/>
+    </xs:complexType>
+    <xs:simpleType name="TiposTemperatura">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="celsius"/>
+            <xs:pattern value="farenheit"/>
+            <xs:pattern value="kelvin"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="TipoComplejo"></xs:element>
+    <xs:element name="temperatura" type="TipoTemperatura"/>
+    <xs:element name="numero" type="xs:float"></xs:element>
+</xs:schema>

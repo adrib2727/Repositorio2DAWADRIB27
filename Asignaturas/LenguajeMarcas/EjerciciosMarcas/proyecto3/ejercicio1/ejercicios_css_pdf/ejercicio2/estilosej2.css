@@ -1,0 +1,17 @@
+body{
+    font-size: large;
+}
+.doc{
+    margin-left: 35%;
+}
+.linea{
+    border: 1px solid black;
+    margin-left: 30%;
+    margin-right:30%;
+}
+#icono{
+    float: right;
+    height: 11%;
+    width: 11%;
+    padding-right: 47%;
+}

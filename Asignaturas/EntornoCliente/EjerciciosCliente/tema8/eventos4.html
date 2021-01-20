@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 4</title>
+</head>
+<body>
+    <h3 id="info">Has seleccionado el p: </h3>
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <p>Animi, ullam laborum! Cupiditate, impedit eligendi!</p>
+    <p>Ipsa eius sunt exercitationem nisi reiciendis.</p>
+    <p>Numquam perspiciatis harum eligendi ea dolorem!</p>
+    <p>Saepe temporibus rerum ipsa eligendi commodi.</p>
+    <p>Accusamus quos fuga cum expedita enim?</p>
+    <p>Obcaecati est ab alias corporis reiciendis?</p>
+    <p>Quidem mollitia vel nulla dolorum sit!</p>
+    <p>Eius nesciunt expedita sapiente vero error.</p>
+    <p>Incidunt accusantium alias dicta in perferendis!</p>
+
+    <script>
+        //Selecciona el p a través de su nombre de etiqueta.
+        let pLista = document.getElementsByTagName("p");
+        //Selecciona el h3 a través de su nombre de etiqueta, [0] representa el único elemento h3 que se captura.
+        let informacion = document.getElementsByTagName("h3")[0];
+        
+        /*Se recorre pLista a través de la variable p, después, junto con escuchador de eventos, 
+        se le dice el HTML de la variable que almacena el h3, que modifique el texto por la captura que 
+        ha realizado el evento, es decir, escribe en el h3 el p que se ha clickado.*/ 
+        for(let p of pLista){
+            p.addEventListener("click", (evento) => {
+                informacion.innerHTML = `Has seleccionado el p: ${evento.target.innerHTML}`;
+            });
+        }
+    </script>
+</body>
+</html>

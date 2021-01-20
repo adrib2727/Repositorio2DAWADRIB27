@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const prov = new Map();
+        prov.set(30, "Murcia");
+        prov.set(1, "Álava");
+        prov.set(28, "Madrid");
+        console.log(prov);
+
+        var provin = new Map([[1, "Álava"], [2, "Valencia"], [3, "Jaen"]]);
+        console.log(provin);
+
+        console.log(prov.get(1)); //Devuelve el elemento.
+        console.log(prov.has(28)); //Devuelve el booleano.
+
+        let claves = prov.keys();
+        for(let c of claves){
+            console.log(c); 
+            console.log(prov.get(c));
+        }
+
+        let valores = prov.values();
+        let nuevoP = [];
+        for (let[clave, valor] of prov){
+            nuevoP.push([clave, valor]); //Array de tres dimensiones con 3 filas.
+            console.log(`Clave ${clave} valor ${valor}`);
+            
+        }
+        console.log(nuevoP[0][1]); //Es una matriz, sale el número en la posicion 0 , 1
+    </script>
+</body>
+</html>

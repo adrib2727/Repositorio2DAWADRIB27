@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor{
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around; /* Para hacer cada uno con el espacio que necesite. */
+        }
+        h4{
+            background-color: lightgreen;
+            border-radius: 5px;
+            text-align: center;
+            padding: 1em;
+        }
+        label, input{
+            display: block;
+            float: left;
+            margin-bottom: 10px;
+        }
+        label{
+            text-align: right;
+            width: 70px;
+            padding-right: 10px;
+        }
+        fieldset{
+            border: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="izq">
+            <h4>Izquierda</h4>
+            <button id="activo">Activo</button>
+            <button id="selecciona">Selecciona la clave</button>
+            <button id="tamano">Tamaño seleccionado</button>
+            <fieldset>
+                <label for="desde">Desde</label>
+                <input type="text" id="desde">
+            </fieldset>
+            <fieldset>
+                <label for="hasta">Hasta</label>
+                <input type="text" id="hasta">
+            </fieldset>
+            <button id="seleccionar">Seleccionar</button>
+        </div>
+        <div class="centro">
+            <h4>Formulario</h4>
+            <form action="#">
+                <fieldset>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre">
+                    <label for="clave">Clave</label>
+                    <input type="text" id="clave">
+                </fieldset>
+                <fieldset>
+                    <label for="socio">Socio</label>
+                    <input type="radio" name="psocio" id="socio" value="socio">
+                    <label for="invitado">Invitado</label>
+                    <input type="radio" name="psocio" id="invitado" value="socio">
+                    <label for="pago">Pago</label>
+                    <input type="radio" name="pcocio" id="pago" value="socio">
+                </fieldset>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <div class="der">
+            <h4>Descripcion</h4>
+            <p id="mensaje"></p>
+        </div>
+    </div>
+    <script>
+        /* Forma de seleccionar el primer formulario */
+        let formulario = document.forms[0];
+        let nombreUsu = document.getElementById("nombre");
+        let mensaje = document.getElementById("mensaje");
+
+        formulario.addEventListener("submit", (evento) => {
+            let exp = /^[a-zA-Z0-9]{4,}$/;
+            if(exp.test(nombreUsu.value) == false){
+                evento.preventDefault();
+                mensaje.innerHTML = "Nombre de usuario muy corto";
+            }else{
+                mensaje.innerHTML = "";
+            }
+        });
+
+        document.getElementById("activo").addEventListener("click", (evento) => {
+            let radios = document.querySelectorAll("input[type='radio'");
+            for(let radio of radios){
+                /* Cada elemento tiene una propiedad, en este caso true o false. */
+                if(radio.checked){
+                    mansaje.innerHTML = radio.value;
+                }
+            }
+        });
+        
+        document.getElementById("selecciona").addEventListener("click", (evento) => {
+            let clave = document.getElementById("clave");
+            clave.focus();
+            /* Primer elemento que quieras seleccionar, hasta donde quieres que llegue */
+            clave.setSelectionRange(0, clave.value.length);
+        });
+
+        document.getElementById("tamano").addEventListener("click", () => {
+            mensaje.innerHTML = nombreUsu.value[nombre.Usu.setSelectionStart];
+            mensaje.innerHTML = mensaje.innerHTML + nombreUsu.value[nombreUsu.selectionEnd - 1];
+        });
+
+        document.getElementById("seleccionar").addEventListener("click", (evento) => {
+            let inicio = document.getElementById("desde");
+            let fin = document.getElementById("hasta");
+
+            nombreUsuario.focus();
+            nombreUsuario.setSelectionRange(inicio, fin);
+            mensaje.innerHTML = nombreUsu.value.slice(inicio, fin);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!ELEMENT Taller (mecanico, coche_reparado, propietario, trabajo)>
+<!ATTLIST Taller codigo ID #REQUIRED>
+    <!ELEMENT mecanico (nombre1)>
+        <!ELEMENT nombre1 (#PCDATA)>
+    <!ELEMENT coche_reparado (matricula, marca, modelo)>    
+        <!ELEMENT matricula (#PCDATA)>
+        <!ELEMENT marca (#PCDATA)>
+        <!ELEMENT modelo (#PCDATA)>
+    <!ELEMENT propietario (nombre2, apellidos)>
+        <!ELEMENT nombre2 (#PCDATA)>  
+        <!ELEMENT apellidos (#PCDATA)>  
+    <!ELEMENT trabajo (fecha_inicio, fecha_fin, valor, informe)>
+        <!ELEMENT fecha_inicio (#PCDATA)>
+        <!ELEMENT fecha_fin (#PCDATA)>
+        <!ELEMENT valor (#PCDATA)>
+        <!ELEMENT informe (#PCDATA)>

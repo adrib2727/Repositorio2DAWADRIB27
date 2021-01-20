@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                background-color: blanchedalmond;
+            }
+            table{
+            width: 50%;
+            }
+            td{
+            border:3px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var filas;
+            document.write("<table>");
+            filas = prompt("¿Cuántas filas desea?");
+
+            for(let a = 0; a < filas; a++) //Mientras que la fila esté entre 0 y el número estipulado:
+            {
+                document.write("<tr>");
+                for(let b = 0; b <= 3; b++) //Mientras los datos no sean mayores o iguales que 3 estrictamente:
+                {
+                    document.write("<td>", b);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+    </body>
+</html>

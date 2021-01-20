@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let frase = "Un gato es blanco, un gato es negro:\n" +
+                    "Con sus caballitos blancos,\n" + 
+                    "Con sus caballitos negros.\n" +
+                    "Con su caja de pino\n" + 
+                    "y su muertito dentro."
+        
+        console.log(frase);
+
+        while(frase.indexOf("caballitos")!=-1){
+            frase = frase.replace("caballitos","burritos");
+        }
+
+        console.log(frase);
+
+        //También se puede hacer de otra forma.
+        console.log(frase.replace(/caballitos/gi, "caballitos"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Se quieren crear objetos de tipo punto y necesitamos que incorporen:
+        1. Dos propiedades x, y, representan su posición en un eje de cordenadas.
+        2. Para crear puntos necesitaremos una función contronstructora a la que pasaremos dos
+        números. Si no se recibe nada o no es numérico colocará 0.
+        3. Un método mover al que le pasamos dos números y nos permite modificar las coordenadas
+        del punto.
+        4. Un método copia que nos devuelve una copia del objeto.
+        5. Un método iguales que recibe un segundo punto y nos dice si ambos puntos son iguales.
+        6. Un método distancia que recibe un segundo punto y nos dice la distancia entre los dos
+        puntos.
+        7. Un método toString que devuelve un texto con las coordenadas del punto.*/
+
+        function Punto(x,y){
+            this.x = isNaN(x) ? "0" : x; //Similar al if
+            this.y = isNaN(y) ? "0" : y;
+
+            //Punto 2
+            this.mover = function(x,y){
+                this.x = isNaN(x) ? "0" : x;
+                this.y = isNaN(y) ? this.y : y;
+            }
+            //Punto 3
+            this.copia=()=> new Punto(this.x, this.y);
+
+            //Punto 4
+            this.iguales=function(p){
+                return ((this.x == p.x) && (this.y == p.y)) ? true : false;
+            }
+
+            //Punto 5
+            this.distancia = function(p){
+                /*Math.pow((this.x - p.x),2)+ Math.pow((this.x - p.x),2));*/
+            }
+        }
+
+        var p1 = new Punto();
+        p1.mover(77, "Pepe"); //Punto 2
+        console.log(p1);
+
+        //Punto 3
+        var p2 = p1.copia();
+        console.log(p2);
+
+        var p3 = p1.iguales();
+        console.log(p3);
+    </script>
+</body>
+</html>

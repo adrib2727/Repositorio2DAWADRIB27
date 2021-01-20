@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Añadir a todos los arrays un método llamado media que calcule la media se todos sus elementos.*/
+        var numeros = [1,2,3,4,5];
+        /*Array.prototype.media = function(){
+            let suma = 0;
+            for(e of this){
+                suma = suma + e;
+            }
+            return suma/this.length;
+        }*/
+
+        Array.prototype.media = function(){
+            return this.reduce((anterior, actual)=>(anterior+actual))/this.length;
+        }
+
+        console.log(numeros.media());
+    </script>
+</body>
+</html>

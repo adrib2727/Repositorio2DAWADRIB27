@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mapas</h1>
+    <script>
+        var miMapa = new Map();
+
+        miMapa.set("DWC", "Desarrollo Web en Entorno Cliente");
+        miMapa.set("DWS", "Desarrollo Web en Entorno Servidor");
+        miMapa.set("DWD", "Desarrollo Web Despliegue");
+        miMapa.set("LM", "Lenguaje Marcas");
+
+        //Mostrar cuántos módulos hay introducidos.
+        var iter = miMapa.keys
+
+        //Muestra todos los módulos y abreviaturas.
+        for(var [abr, nom] of miMapa){
+            document.write(`La clave ==> ${abr} y su valor ==> ${nom}.<br>`);
+        }
+
+        document.write("<br>");
+        //Muestra solo los nombres de los módulos
+        document.write("Las siguientes son los nombres: <br>")
+        for(var [abr, nom] of miMapa){
+            document.write(nom+"<br>");
+        }
+
+        document.write("<br>");
+        //Muestra las abreviaturas de los modulos.
+        document.write("Las siguientes son las abreviaturas: <br>");
+        for(var [abr, nom] of miMapa){
+            document.write(abr+"<br>");
+        }
+
+        document.write("<br>");
+        //Nos dice si está LM.
+        var existe = false;
+        for(var [abr, nom] of miMapa){
+            if([abr, nom] = miMapa.get("LM", "lenguaje Marcas")){
+                existe = true;
+            }
+        }
+
+        document.write("Existencia del módulo LM ==>"+existe);
+
+        document.write("<br><br>");
+        //Si está el módulo de LM, lo elimina.
+        for(var[abr, nom] of miMapa){
+            if([abr, nom] = miMapa.get("LM", "lenguaje Marcas")){
+                miMapa.clear("LM", "Lenguaje Marcas");
+            }
+            document.write(`La clave ==> ${abr} y su valor ==> ${nom}.<br>`);
+        }
+
+        //Mostrará los módulos y abreviaturas.
+        for(var [abr, nom] of miMapa){
+            document.write(`La clave ==> ${abr} y su valor ==> ${nom}.<br>`);
+        }
+    </script>
+</body>
+</html>

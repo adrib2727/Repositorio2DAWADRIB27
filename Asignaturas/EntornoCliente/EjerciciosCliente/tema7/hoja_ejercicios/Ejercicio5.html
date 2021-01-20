@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="principal">
+    <p>Uno</p>
+    <p>Dos</p>
+    <p>Tres</p>
+
+    <script>
+        var cuerpo = document.getElementById("principal");
+        var parrafo = document.querySelectorAll("p"); //Selecciona las etiquetas de párrafo.
+
+        /* for(let i = parrafo.length - 1; i >= 0; i--){
+            cuerpo.appendChild(parrafo[i]);
+        } */
+
+        let x = 0;
+        for(let p of parrafo){
+            x++;
+            let nuevo_parrafo = document.createElement("p"); //Añade un nuevo elemento de párrafo, salen segun los p que hayan.
+            nuevo_parrafo.innerHTML = x; // Añade el contenido nuevo que se le va a añadir al párrafo.
+            cuerpo.appendChild(nuevo_parrafo); 
+            cuerpo.removeChild(p); //Se borran los parrafos para que no se muestren ordenados.
+        }
+        
+    </script>
+</body>
+</html>

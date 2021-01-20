@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <h1>Bienvenido al juego del ahorcado</h1>
+    <script>
+        /*Muestra el array oculto por palabras, en la consola la solución. */
+
+        const Palabras = ["ordenador", "silla", "pizarra", "proyector", "mesa", "puerta"];
+        var PalabraMostr = []; //Array donde meteremos la nueva palabra dividida.
+        var PalOculta = []; //Array donde se muestra la palabra oculta dividida y convertida en comas.
+
+        var posAleatoria;
+        var palAleatoria;
+        var palabra;
+
+        for(let ind of Palabras){ //Recorre todo el array.
+            posAleatoria = Math.floor(Math.random() * Palabras.length); //Saca posición aleatoria.
+        }
+
+        palAleatoria = Palabras[posAleatoria]; //Para que coja la palabra en vez de la posición.
+        palabra = palAleatoria.split(""); //Esto es lo que hace que la palabra sea iterable.
+
+        //Bucle que me mustre la palabra en caracteres sin sustituir por barras BAJAS
+        for(let letra of palabra){
+            PalabraMostr.push(letra);
+        }
+
+        //Bucle que me muestra la palabra en caracteres sustituida por BARRAS BAJAS.
+        for(let letra of palabra){
+            PalOculta.push(" _ ");
+        }
+
+        document.write(PalOculta);
+        console.log(PalabraMostr); //Muestra la solución de la palabra en la consola.
+    </script>
+</body>
+</html>

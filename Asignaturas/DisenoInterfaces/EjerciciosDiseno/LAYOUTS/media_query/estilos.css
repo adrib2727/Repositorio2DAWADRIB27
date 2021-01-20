@@ -1,0 +1,22 @@
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenido{
+    width: 24%;
+}
+@media (max-width: 800px){
+    .contenido{
+        width: 32%;
+    }
+}
+@media (max-width: 659px){
+    .contenido{
+        width: 48%;
+    }
+}
+@media (max-width: 400px){
+    .contenido{
+        width: 99%;
+    }
+}

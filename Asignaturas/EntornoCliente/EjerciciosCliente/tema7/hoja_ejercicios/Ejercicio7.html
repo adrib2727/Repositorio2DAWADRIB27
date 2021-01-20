@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="cuerpo">
+    <!-- Hacer un array y meter los p en cada posición del array, primero hacer un array vacío
+    meter los datos con un push. Después borrar y usar el setInterval para que las letras vayan apareciendo poco a poco. -->
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, aperiam?</p>
+    <p>Dolores provident dolorem accusantium maiores aliquid voluptates quo ipsum illum.</p>
+    <p>Magni, id molestias exercitationem est assumenda cumque necessitatibus provident voluptatem?</p>
+    <p>Aperiam, a officiis minus odio cumque explicabo et porro? Odio.</p>
+    <p>Laudantium incidunt voluptates deleniti obcaecati numquam, eum error saepe dolore?</p>
+
+    <script>
+        var parrafos_js = document.querySelectorAll("p"); //Variable que tiene en cuenta los p.
+        var parr_js = document.getElementById("p1"); //Variable que coge el id del body.
+        var cuerpo = document.getElementById("cuerpo");
+        var array_p = []; //Array de los p.
+
+        for(let p of parrafos_js){
+            array_p.unshift(p); //Añade uno o más elementos a un array.
+            cuerpo.removeChild(p); //Elimina el párrafo.
+        }
+
+        //Primer intervalo de tiempo (Momento en que van apareciendo los párrafos totales).
+        var tiempo1 = setInterval(() => {
+            if(!array_p.length){
+                clearInterval(tiempo1);
+            }else{
+                var miP = array_p.pop();
+                var texto = miP.innerHTML;
+                miP.innerHTML = " ";
+                cuerpo.appendChild(miP);
+
+                var tiempo = setInterval(() => {
+                    if(texto){
+                        miP.innerHTML = miP.innerHTML + texto.slice(0,1);
+                        texto = texto.slice(1);
+                    }else{
+                        clearInterval(tiempo);
+                    }   
+                }, 80);
+            }
+        }, 8000);
+
+        
+
+    </script>
+</body>
+</html>

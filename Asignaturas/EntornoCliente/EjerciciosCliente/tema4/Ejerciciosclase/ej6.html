@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado{
+            position: absolute;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="cuadrado">
+    </div>
+    <script>
+        var aleatorio = Math.trunc(Math.random()*100);
+        var div1 = document.getElementById("div1");
+
+        for(let a = 0; a != aleatorio; a++)
+        {
+            document.write(div1);
+        }
+    </script>
+</body>
+</html>

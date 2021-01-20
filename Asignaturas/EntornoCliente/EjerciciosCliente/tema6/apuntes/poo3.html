@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Poligono_regular(lados, nombre){ //Esto es la clase y el constructor.
+            this.lados = lados;
+            this.nombre = nombre;
+            this.mostrarInfo = () => `Soy un ${this.nombre} y tengo ${this.lados} lados \n`;
+        }
+
+        Poligono_regular.prototype.U = 5;
+        Poligono_regular.prototype.Angulo_Interior=()=>180*(this.lados-2)/this.lados;
+
+        function Cuadrado(){ //Herencia de la clase principal.
+            this.__proto__ = new Poligono_regular(4, "Cuadrado");
+            this.mostrarInfo = () => "Hola soy un cuadrado";
+            this.solodelCuadrado="Solo para cuadrados";
+        }
+
+        let p = new Poligono_regular(4, "Cuadrado");
+        let t = new Poligono_regular(3, "Triangulo");
+        let c = new Cuadrado();
+
+        console.log(c);
+        console.log(c.mostrarInfo());
+        console.log(t);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 6</title>
+    <style>
+        #centro{
+            position: absolute;
+            top: 25%;
+            border: 1px solid black;
+            margin-left: 25%;
+            margin-right: 25%;
+            height: 50%;
+            width: 50%;
+            background-image: url('https://picsum.photos/200/300');
+            background-color: chartreuse;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="centro"></div>
+    <script>
+        let centro = document.getElementById("centro");
+
+        document.addEventListener("keypress", (evento) => {
+            if(evento.key === "a"){
+                centro.style.backgroundColor = "red";
+            }else if(evento.key === "b"){
+                centro.style.backgroundImage = "url('https://picsum.photos/200/300')";
+            }
+        });
+    </script>
+</body>
+</html>

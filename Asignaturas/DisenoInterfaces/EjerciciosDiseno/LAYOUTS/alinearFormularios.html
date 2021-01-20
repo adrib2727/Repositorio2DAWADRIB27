@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label, input, textarea{
+            float: left;
+        }
+        label{
+            text-align: right;
+            width: 150px;
+            padding-right: 20px;
+        }
+        fieldset{
+            border: 0px;
+        }
+        legend{
+            border: thin solid blue;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <legend>Formulario maquetado
+        <form>
+            <fieldset>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" value="">
+            </fieldset>
+            <fieldset>
+                <label for="hombre">Hombre</label>
+                <input type="radio" id="hombre">
+                <label for="mujer">Mujer</label>
+                <input type="radio" id="mujer">
+            </fieldset>
+            <fieldset>
+                <label for="des">Descripción</label>
+                <textarea id="des"></textarea>
+            </fieldset>
+            <fieldset>
+                <input type="button" value="enviar">
+            </fieldset>
+        </form>
+    </legend>
+</body>
+</html>

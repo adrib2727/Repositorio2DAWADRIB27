@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <!--Saca una palabra aleatoria de un array de palabras-->
+    <script>
+        var Palabras = ["ordenador", "silla", "pizarra", "proyector", "mesa", "puerta"];
+        var pal;
+
+        for(let ind of Palabras){ //Recorre todo el array.
+            //Redondea un índice aleatorio del array siempre en el campo donde esta la longitud del array.
+            pal = Math.floor(Math.random() * Palabras.length);
+        }
+        console.log(`La palabra aleatoria es ${Palabras[pal]}`);
+    </script>
+</body>
+</html>

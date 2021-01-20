@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Poligono_regular(lados, nombre){
+            this.lados = lados;
+            this.nombre = nombre;
+            this.mostrarInfo = () => `Soy un ${this.nombre} y tengo ${this.lados} lados \n`;
+        }
+
+        let c = new Poligono_regular(4, "Cuadrado");
+        let t = Poligono_regular(3, "Triángulo");
+        console.log(c.mostrarInfo()," ", t.mostrarInfo());
+
+        let p = {};
+        console.log(c instanceof Poligono_regular);
+        condole.log(c.__proto__);
+
+        Poligono_regular.prototype.U; //Añade un nuevo atributo.
+        Poligono_regular.prototype.U = 5; 
+
+        Poligono_regular.prototype.Angulo_Interior() = function(){
+            return 180*(this.lados - 2)/this.lados;
+        }
+        console.log(c.Angulo_Interior());
+
+        c.U = 20;
+        console.log(c.U);
+        console.log(T.U);
+    </script>
+</body>
+</html>

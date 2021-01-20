@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightsalmon;
+        }
+
+        .cabecera {
+            border: 1px solid black;
+            background: linear-gradient(red 0%, yellow);
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .lateral {
+            float: right;
+            background: repeating-linear-gradient(orangered 40%, yellow, orangered);
+            width: 10%;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-top: 10px;
+            height: 485px;
+            order: 2;
+        }
+
+        .central {
+            margin-top: 10px;
+            width: 89%;
+            background-color: #CAF133;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-radius: 5px;
+            border: 1px solid black;
+            height: 485px;
+        }
+
+        .pie {
+            border: 1px solid black;
+            margin-top: 10px;
+            /* display: flex; */
+            border-radius: 5px;
+            /* flex-direction: row; */
+            height: 50px;
+            background-color: lime;
+        }
+
+        .imagenes_safari {
+            height: 30%;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        @keyframes amarilloCrece{
+            form{
+                height: 30%;
+            }
+            25%{
+                height: 60%;
+            }
+            50%{
+                height: 90%;
+            }
+            75%{
+                height: 60%;
+            }
+            to{
+               height: 30%;
+            }
+        }
+
+        .pie{
+            animation: amarilloCrece 5 infinite ease-in;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuerpo">
+        <div class="cabecera">
+            <h1>Cabecera</h1>
+        </div>
+        <div class="lateral">
+            <h1>Lateral</h1>
+        </div>
+        <div class="central">
+            <h1>Centro</h1>
+            <img class="imagenes_safari" src="https://cdn.iconscout.com/icon/free/png-256/safari-39-1175095.png" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus numquam doloremque natus. In
+                voluptatibus temporibus numquam exercitationem tempora perferendis rerum.</p>
+        </div>
+        <div class="pie">
+            <div class="foto">
+                <img class="imagenes_safari" src="https://cdn.iconscout.com/icon/free/png-256/safari-39-1175095.png" alt="">
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+
+</html>

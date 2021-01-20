@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        /*Se quiere realizar un programa que lea por teclado las 5 notas obtenidas por un alumno
+        (comprendidas entre 0 y 10). A continuación debe mostrar todas las notas, la nota media, la
+        nota más alta que ha sacado y la menor.*/
+         
+        const cadena1 = [];
+        let entrada;
+
+        for(let entr = 0; entr < 5; entr++){
+            entrada = prompt("Introduce las notas (Del 1 al 10)");
+            cadena1.push(entrada);
+        }
+        //document.write(cadena1);
+       
+
+        document.writeln("Las notas del alumno son: ");
+        for(let e of cadena1){
+            document.writeln(e); //Mostrador de notas.
+        }
+
+        document.write("<br>");
+        let suma = 0;
+        let div = 0;
+        for(let cont = 0; cont < cadena1.length; cont++){
+            suma  = suma + cadena1[cont];
+        }
+        document.write("La suma de las notas es: "+suma);
+
+
+        document.writeln();
+        document.write("<br>");
+
+        
+
+        
+       
+
+        /*for(let e of cadena1){
+            document.writeln(e)
+        }*/
+
+    </script>
+</body>
+</html>

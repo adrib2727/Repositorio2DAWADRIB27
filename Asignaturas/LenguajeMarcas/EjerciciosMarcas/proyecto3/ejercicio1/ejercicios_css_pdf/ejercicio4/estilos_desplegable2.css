@@ -1,0 +1,36 @@
+* {
+	margin: 0px;
+	padding: 0px; 
+	outline: 0;
+}
+
+#menu {
+	text-align: center;
+	font-size: 0.7em;
+	width: 540px;
+	margin: 20px auto;
+}
+
+#menu ul {
+	list-style-type: none;
+}
+
+#menu ul li {
+	width: 162px;
+}
+
+#menu ul li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	background-color: rgba(59,93,148,1);
+	border: solid 1px #fff;
+	padding: 8px;
+	position: relative;
+}
+
+#menu ul li ul li a {
+	width: 160px;
+	padding: 8px 0px;
+	border-top-color: transparent;
+}

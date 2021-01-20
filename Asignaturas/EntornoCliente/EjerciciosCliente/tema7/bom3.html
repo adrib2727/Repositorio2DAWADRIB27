@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .moto{
+            background-color: lightblue;
+        }
+        .coche{
+            background-color: lightcoral;
+        }
+        .triatleta{
+            background-color: lightgreen;
+        }
+        .atleta{
+            background-color: lightslategray;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="triatleta">Ivan Raña</li>
+        <li class="coche">Daniel Ricciardo</li>
+        <li class="moto">Eddie Lawson</li>
+        <li class="atleta">Yago Lamela</li>
+        <li class="moto">Campi Herrero</li>
+        <li class="triatleta">Mario Mola</li>
+    </ul>
+    <input type="submit" disabled>
+    <script>
+        let triatletas = document.getElementsByClassName("triatleta");
+        console.log(triatletas);
+
+        let todosLi = document.querySelectorAll("li");
+        console.log(todosLi);
+
+        let todasLasMotos = document.querySelectorAll(".moto");
+        console.log(todoslosMoto);
+
+        for(let li of todosLi){
+            console.log(li.getAttribute("class"));
+            li.getAttribute("class", "deportista");
+            li.removeAttribute("class");
+
+            li.toggleAtributte("class", "moto");
+        }
+
+        let boton = document.querySelectorAll("input");
+        boton[0].toggleAttribute("disabled");
+
+        for(let atributo of boton[0].attributes){
+            console.log(atributo.name, " y su valor es ", atributo.value);
+        }
+    </script>
+</body>
+</html>

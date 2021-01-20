@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia prototípica</title>
+</head>
+<body>
+    <script>
+        function Poligono_regular(lados, nombre){
+            this.lados = lados;
+            this.nombre = nombre;
+            this.mostrarInfo = () => `Soy un ${this.nombre} y tengo ${this.lados} lados \n`;
+        }
+
+        Poligono_regular.prototype.U; //Así sin nada da undefined, hay que ponerle un valor.
+        Poligono_regular.prototype.U = 5;
+
+         Poligono_regular.prototype.AnguloInterior = function(){
+            return 180*(this.lados-2)/this.lados;
+        }
+
+        //cueadrado hereda de Poligono_regular mediante this.__proto__ = new clase_padre.
+        function Cuadrado(){
+            this.__proto__ = new Poligono_regular(4, "Cuadrado");
+            this.mostrarInfo() = () => "Hola";
+            this.solodelCuadrado = "Solomia";
+        }
+
+        let a  = new Poligono_regular(4, "Cuadrado");
+        let b = new Poligono_regular(3, "Triangulo");
+        let c = new Cuadrado();
+        
+        console.log(c);
+        console.log(c.mostrarInfo());
+
+        a.U = 4;
+
+        console.log(a.AnguloInterior());
+        console.log(a);
+        console.log(b);
+        console.log(c.AnguloInterior());
+    </script>
+</body>
+</html>

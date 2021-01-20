@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+
+    <script>
+
+        /*Hacer un programa que inicialice un vector de números con valores aleatorios, 
+        y posterior ordene los elementos de menor a mayor.*/
+
+        const valores = [];
+
+        for(let c = 0; c < 10; c++){ //Desde la posición 0, hasta la 9. Engloba los 10 números porque empiezan en 0.
+            valores.push(Math.round(Math.random()*50));
+        }
+        console.log(valores);
+        document.writeln(valores);
+
+        valores.sort(function Ordenar(a, b){
+            return a-b;
+        });
+        console.log(valores);
+        document.write("<br>");
+        document.writeln(valores);
+
+    </script>
+</body>
+</html>

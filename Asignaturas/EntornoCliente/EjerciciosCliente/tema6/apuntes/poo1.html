@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        //Formas de declarar un objeto
+        let poligono_regular = new Object();
+        let poligono_regular2  = {};
+
+        poligono_regular.lados = 4;
+        document.write(poligono_regular.lados);
+
+        //Forma de declarar un método que te calcula los lados de un polígono.
+        poligono_regular.area = function(){
+            return poligono_regular.lados * poligono_regular.lados;
+        }
+        document.write(poligono_regular.area());
+        console.log(Object.keys(poligono_regular));
+        
+
+        let poligonono_regular = {
+            lados: 4,
+            tamano_lados: 2,
+            nombre: "Cuadrado",
+            area: function(){
+                return this.tamano_lados * this.tamano_lados;
+            }
+        };
+
+        poligonono_regular.color = "blue";
+        document.write(poligonono_regular.area());
+        console.log((poligonono_regular));
+
+        for(let propiedad in poligonono_regulara){
+            console.log(`${propiedad} tiene el valor ${poligonono_regular[propiedad]}`);
+        }
+    </script>
+</body>
+</html>

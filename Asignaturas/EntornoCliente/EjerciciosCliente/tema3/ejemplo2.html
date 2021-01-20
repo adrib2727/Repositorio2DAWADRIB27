@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /* Crear una aplicación que pida algo y te diga si es un número o no. */
+        var elem;
+        elem = prompt("Escibe lo que quieras");
+
+            if(isNaN(elem)) /*Devuelve falso si es un número*//*Devuelve verdadero si no es un número*/
+            {
+                document.write(elem+" no es un número");
+            }
+            else
+            {
+                document.write(elem+" es un número");
+            }
+    </script>
+</body>
+</html>

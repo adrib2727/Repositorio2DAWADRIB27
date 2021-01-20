@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*1. Ordenar un array de palabras en orden inverso.
+            1.1) El usuario introducirá las palabras hasta que se introduzca la cadena vacía o se pulse 
+            cancelar.
+            1.2) Se eliminarán las palabras repetidas. (Ver si usar localeCompare()).
+            1.3) Se ordenará en español pero en orden inverso.
+        */
+
+        const nombres = [];
+        var entrada = prompt("Introduce nombres. Para cancelar no escribas nada o pulsa cancelar");
+        var conjunto = new Set(); //Definición del conjunto.
+
+        //Mete datos en el array
+        while(entrada != undefined && entrada != ""){
+            console.log("Dentro del bucle de entrada");
+            nombres.push(entrada); //Introduce datos en el Array.
+            entrada = prompt("Introduce nombres. Para cancelar no escribas nada o pulsa cancelar");
+        }
+
+        document.write(`El array sin ordenar es: ${nombres}.<br>`);
+        console.log("Ya estás fuera del bucle de entrada");
+
+        nombres.reverse(nombres.sort((a,b)=> a.localeCompare(b))); //Ordenación con la función flecha y localeCompare().
+        document.write(`El array ordenado de forma inversa es: ${nombres}.<br>`);
+        console.log("Array ordenado");
+
+        //Eliminar palabras repetidas.
+        for(let v of nombres){ //Bucle que recorre el array y mete sus datos en el conjunto.
+            conjunto.add(v);
+        }
+        for(let b of conjunto){ //Bucle que muestra los datos del conjunto
+            document.write(b+", ");
+        }
+    </script>
+</body>
+</html>

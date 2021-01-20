@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const palabras = ["pepe", "gabriel", "alagatruba", "susana", "ana"];
+        
+        palabras.sort((a,b) =>{
+            let resultado;
+            if(a.length == b.length){
+                resultado = a.localeCompare(b,"es");
+            }else{
+                resultado = a.length - b.length;
+            }
+            return resultado;
+        });
+    </script>
+</body>
+</html>

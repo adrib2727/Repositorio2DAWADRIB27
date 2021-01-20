@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar frase al revés</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        .titulo{
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            border: 2px solid black;
+            text-align-last: center;
+            background-color: white;
+        }
+        .barra{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1 class="titulo">Introduce una frase</h1>
+        <input class="barra" src="entrada1" type="text" placeholder="Introduce una frase">
+        <button>Convertir</button>
+    </div>
+    <script>
+        var entrada1;
+        for(let pos = entrada1.length; pos != -1; pos--)
+        {
+            document.write(entrada1.charAt(pos));
+        }
+    </script>
+</body>
+</html>

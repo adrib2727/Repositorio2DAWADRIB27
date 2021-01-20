@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*que recorra un array vaciandolo y mostrando los elementos*/
+
+        const a = [1, 2, 3, 4, 5, 6];
+        let cont = 0;
+        let b;
+        let long = a.length
+
+        let copia = [];
+
+        /*
+        while(cont <= long)
+        {
+            if(long != 0)
+            {
+                b = a.pop();
+                long--;
+                console.log(b);
+            }
+            cont--;
+        }
+        */
+
+        /*while(a.length != 0){
+            b = a.pop();
+            b.push(b);
+            document.writeln(b);
+            a.length++;
+        }*/
+
+        const a = [91,0,3,33,15];
+        let copia = [];
+        let b;
+
+        function comparaNumeros(a,b){ //Parámetros formales (No tiene que ver con las palabras declaradas).
+            return a - b;
+        }
+
+        function compararTamanos(x,y){
+            return x.length - y.length;
+        }
+
+        console.log(a);
+        console.log(a.sort(comparaNumeros));
+
+        
+    </script>
+</body>
+</html>

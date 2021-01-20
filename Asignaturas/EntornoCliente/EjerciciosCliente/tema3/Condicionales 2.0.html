@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 50%;
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        /*Crea una tabla con las filas y columnas que 
+        se digan*/
+
+        var filas;
+        var columnas;
+
+        document.write("<table>");
+        filas = prompt("¿Cuántas filas?");
+        columnas = prompt("¿Cuántas columnas?");
+
+        for(let f=0; f<filas; f++){
+            document.write("<tr>");
+            
+            for(let c=0; c<columnas; c++){
+                document.write("<td>",c);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

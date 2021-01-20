@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Representa el navegador del usuario-->
+    <script>
+        console.log(navigator.userAgent);
+        console.log(navigator.plugins);
+        console.log(navigator.cookieEnabled);
+        console.log(" Alto: ",screen.height," Ancho: ", screen.width," Profundidad de color: ", screen.colorDepth);
+        console.log(" Alto: ",screen.availHeight," Ancho: ", screen.availWidth);
+        console.log(" Orientación: ",screen.orientation);
+
+        console.log(location.href); //Redirige a Google
+        location.href = "https://www.google.com";
+
+        console.log(" Host: ", location.host, " Nombre del host: ",location.hostname, " Ruta ", location.pathname)
+        console.log("Cadena búsqueda", location.search);
+        
+        /*
+        history.go(-1);
+        history.go(0);
+        history.go(+1);
+        */
+
+        console.log(history.go(-(history.length-1)));
+        console.log(window.innerHeight, window.innerWidth, window.screenTop);
+        console.scroll({
+            top: 1000, left:0, behavior:"smooth"
+        });
+        window.scrollBy(x,y);
+        window.scrollTo();
+        window.find();
+    </script>
+</body>
+</html>

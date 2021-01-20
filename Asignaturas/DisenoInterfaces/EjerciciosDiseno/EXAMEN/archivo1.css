@@ -1,0 +1,95 @@
+*{
+    margin: none;
+}
+body{
+    background-image: url("fast.jpg");
+}
+img{
+    height: 50%;
+}
+.cabecera{
+    border-top: purple;
+    width: 100%;
+    background-color: white;
+    margin: 0%;
+    columns: 4;
+}
+.cabecera h4{
+    font-family: 'Open Sans', sans-serif;
+}
+.cabecera h4:hover{
+    color: red;
+    text-decoration: underline;
+    transition: margin-left 4s;
+}
+#centro_rep{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.cuerpo{
+    margin-top: 10%;
+    float: left;
+    margin-left: 15%;
+    width: 40%;
+    text-align: center;
+}
+#titulo1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    color: white;
+}
+#titulo2{
+    font-size: 25px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.formulario{
+    float: right;
+    border: 1px solid red;
+    margin-right: 10%;
+    margin-top: 13%;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.inp{
+    border-radius: 5px;
+    background-color: lightgrey;
+    width: 250px;
+    border: 1px solid black;
+}
+.formulario textarea{
+    background-color: lightgrey;
+}
+.formulario h2{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    
+}
+.pie{
+    background: linear-gradient(100deg, white, lightgray);
+    margin-top: 61%;
+    padding: 10px;
+    columns: 3;
+}
+.pie h3{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.pie h3:hover{
+    column-span: none;
+    transform: rotate(5deg);
+}
+#bt2{
+    padding-top: 20px;
+}
+#boton{
+    background-color: lightgrey;
+    box-shadow: 5px, 3px, 3px, black;
+    width: 20%;
+    border: 1px solid black;
+}
+

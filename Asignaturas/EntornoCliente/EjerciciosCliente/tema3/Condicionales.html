@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table{
+                width: 50%;
+                text-align: center;
+            }
+            td{
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <script>
+            var filas;
+            document.write("<table>");
+            filas = prompt("Cuantas filas");
+
+            for(let i = 0; i < filas; i++)
+            {
+                document.write("<tr>");
+                for(let x=0;x<=5;x++) //Columnas
+                {
+                    document.write("<td>",x);
+                    document.write("</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+        
+    </body>
+</html>

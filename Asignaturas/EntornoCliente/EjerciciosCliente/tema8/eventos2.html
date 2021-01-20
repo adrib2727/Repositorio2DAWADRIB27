@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 2</title>
+    <style>
+        div{
+            border: 1px solid green;
+        }
+        p{
+            border: 1px solid orange;
+            padding: 1em;
+        }
+        span{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <span>Hola</span>
+        </p>
+    </div>
+    <script>
+        let div = document.getElementsByTagName("div")[0];
+        div.addEventListener("click", () => {console.log("Soy el div")}, true);
+        document.getElementsByTagName("p")[0].addEventListener("click", () => {console.log("Soy el p")}, true);
+        document.getElementsByTagName("span")[0].addEventListener("click", () => {console.log("Soy el span")}, true);
+    </script>
+</body>
+</html>

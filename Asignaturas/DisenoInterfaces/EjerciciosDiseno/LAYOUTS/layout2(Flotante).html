@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Layout flotando</title>
+    <style>
+        div{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .cabecera{
+            width: 90%;
+            text-align: center;
+            padding-bottom: 1em;
+            padding-top: 1em;
+            margin: 0 auto 0 auto; /*En este caso el auto es un 5%*/
+            background-color: blueviolet;
+            color: white;
+        }
+        .lateral{
+            float: left;
+            width: 15%;
+            margin-left: 5%;
+            text-align: center;
+            background-color: violet;
+        }
+        .lateral ul{ /*Solo la va a hacer a los ul que están en el lateral */
+            padding-left: 0px;
+        }
+        .lateral li{ /*li hereda de ul*/
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        .lateral a{
+            text-decoration: none;
+            background-color: purple;
+            
+            color: white;
+        }
+        .lateral a:hover{ /*Cuando pasa el raton por encima*/
+            background-color: white;
+            color: palevioletred;
+            padding: 1px;
+        }
+        .central{
+            color: white;
+            float: left;
+            text-align: center;
+            width: 75%;
+            background-color: purple;
+        }
+        .central div{
+            float: left;
+            margin: 1em 0 0 1em;
+        }
+        .pie{
+            clear: both;
+            background-color: silver;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cabecera">
+        <h1>Esto es la cabecera</h1>
+    </div>
+    <div class="lateral">
+        <h4>Lateral</h4>
+        <ul> <!--ul>(li>a{boton})*7-->
+            <li><a href="www.google.es">Botón</a></li>
+            <li><a href="www.google.es">Botón</a></li>
+            <li><a href="www.google.es">Botón</a></li>
+            <li><a href="www.google.es">Botón</a></li>
+            <li><a href="www.google.es">Botón</a></li>
+            <li><a href="www.google.es">Botón</a></li>
+            <li><a href="www.google.es">Botón</a></li>
+        </ul>
+    </div>
+    <div class="central">
+        <h1>Imágenes</h1><!--(div>img)*6-->
+        <div><img src="/home/adridaw2/Imágenes/06a6b8927fca114ec164e3066d17cab0.jpg"></div>
+        <div><img src="/home/adridaw2/Imágenes/06a6b8927fca114ec164e3066d17cab0.jpg"></div>
+        <div><img src="/home/adridaw2/Imágenes/06a6b8927fca114ec164e3066d17cab0.jpg"></div>
+        <div><img src="/home/adridaw2/Imágenes/06a6b8927fca114ec164e3066d17cab0.jpg"></div>
+        <div><img src="/home/adridaw2/Imágenes/06a6b8927fca114ec164e3066d17cab0.jpg"></div>
+        <div><img src="/home/adridaw2/Imágenes/06a6b8927fca114ec164e3066d17cab0.jpg"></div>
+    </div>
+    <div class="pie">
+        <h4>Estudio de diseño</h4>
+    </div>
+</body>
+</html>

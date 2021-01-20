@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Ticket id_ticket ="AO1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="tarea10.xsd">
+    <fecha>2020-07-07</fecha>
+    <hora>17:30:23</hora>
+    <precio moneda="euro">
+        <precioNoIva>56.87</precioNoIva>
+        <iva>11.94</iva>
+        <precioTotal>68.81</precioTotal>
+    </precio>
+    <forma_pago>
+        <tarjeta>
+            <nombre_cliente>Adrián Ibáñez Soriano</nombre_cliente>
+            <digitos_tarjeta>12</digitos_tarjeta>
+        </tarjeta>
+    </forma_pago>
+    <datos_comercio>
+        <nombre>American Jewerly</nombre>
+        <direccion>Detroit</direccion>
+        <cif>546873432-D</cif>
+        <telefono>648433153</telefono>
+    </datos_comercio>
+    <datos_compra>
+        <nombre_articulo>Aspiradora Industrial</nombre_articulo>
+        <cantidad>2</cantidad>
+        <precio_sin_iva>56.87</precio_sin_iva>
+        <porc_IVA>11.94</porc_IVA>
+        <pvp>68.81</pvp>
+    </datos_compra>
+</Ticket>

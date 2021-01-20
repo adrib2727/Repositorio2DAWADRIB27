@@ -1,0 +1,78 @@
+body{
+    font-size: x-large;
+}
+.borde{
+    border: 2px solid black;
+}
+.cabecera{
+    padding-top: 0%;
+}
+#stark{
+    margin-left: 2%;
+    float: left;
+    height: 185px;
+}
+#lista1{
+    text-align: center;
+}
+#fact{
+    position: absolute;
+    left: 70%;
+    top: 1%;
+}
+#fact2{
+    position: absolute;
+    left: 70%;
+    top: 10%;
+}
+.campo{
+    border: 1px solid black;
+    width: 5px;
+}
+.zona1{
+    border: 2px solid black;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+.zona1 h2{
+    text-align: center;
+}
+.cua{
+    border: 1px solid black;
+}
+.zona2{
+    border: 2px solid black;
+    margin-right: 10%;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+.zona2 h2{
+    text-align: center;
+}
+.tabla1{
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-left: 20%;
+}
+.tabla1 tr td{
+    border: 1px solid black;
+}
+#tr1{
+    text-align: center;
+}
+.tabla2{
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-left: 56.5%;
+    margin-bottom: 20px;
+}
+.tabla2 tr td{
+    border: 1px solid black;
+}
+.zona3 h4{
+    text-align: center;
+}
+

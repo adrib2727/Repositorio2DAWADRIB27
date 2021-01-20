@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        legend{
+            font-size: 2em;
+            float: left;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        fieldset{
+            width: 80%;
+            padding: 3%;
+            background-color: #C2C2C2;
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px gray;
+            margin: 0 auto;
+        }
+        label{
+            width: 40%;
+            float: left;
+        }
+        input, textarea{
+            width: 50%;
+            float: right;
+            display: block;
+            border: 1px solid #BFBFBF;
+            padding: 0.2em;
+            border-radius: 5px;
+            background: linear-gradient(to left,#ffffff,darkgrey, #ffffff 100%);
+        }
+        form div{
+            clear: both;
+        }
+        input[type="button"]{
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Registro</legend>
+            <div>
+                <label for="correo">Correo electrónico</label>
+                <input type="text" id="correo" required autofocus placeholder="Escribe tu correo electrónico">
+            </div>
+            <div>
+                <label for="clave">Contraseña</label>
+                <input type="password" pattern="[a-zA-Z0-9]{,8}" id="clave" placeholder="Introduce la contraseña" required>
+            </div>
+            <div>
+                <label for="descripcion">Descripción</label>
+                <textarea name="" id="descripcion" placeholder="Introduce una descripción"></textarea>
+            </div>
+            <div>
+                <label for="boton">Botón</label>
+                <input type="button" value="Aceptar" id="boton" style="margin-top: 1%">
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

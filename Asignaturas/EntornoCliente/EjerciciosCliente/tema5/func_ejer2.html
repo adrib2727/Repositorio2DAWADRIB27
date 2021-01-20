@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Hacer una función que te diga si un núemro es primo.
+        Crea una función que le pase un número indeterminado de números y te diga cuales de ellos son primos.*/
+
+        //Función flecha para sacar un número aleatorio.
+        const ale = x => Math.round(Math.random()*1000);
+        document.write(ale());
+
+        const primo = y => {
+            let numero = ale;
+            let iterador = 1;
+            let resto = 0;
+            if(numero%iterador==0){
+                resto++;
+            }
+            if(numero==1){
+                return "El número 1 es primo";
+            }else{
+                if(resto==2){
+                    return `El número ${numero} es primo`;
+                }else{
+                    return `El número ${numero} no es primo`;
+                }
+            }
+        }
+
+        document.write(primo());
+
+
+
+
+    </script>
+</body>
+</html>

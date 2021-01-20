@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+</head>
+<body>
+    <!--
+        1. Crear array con las palabras que se van a haber.
+        2. Sacar una palabra aleatoria.
+    -->
+    <script>
+        var Palabras = ["ordenador", "silla", "pizarra", "proyector", "mesa", "puerta"];
+        var PalEscogida = []; //Array donde meteremos la nueva palabra.
+        var rand;
+        for(let ind of Palabras){ //Recorre todo el array.
+            rand = Math.floor(Math.random() * Palabras.length);
+        }
+        console.log(`La palabra aleatoria es ${Palabras[rand]}`);
+
+        /*Hasta aquí está bien*/
+        for(rand of Palabras){
+            PalEscogida.push(rand);
+        }
+        
+        for(let ind of PalEscogida){
+            console.log(`La palabra dentro del array 2 es: ${PalEscogida[ind]}`);
+        }
+        
+    </script>
+</body>
+</html>

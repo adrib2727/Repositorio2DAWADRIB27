@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formularios</title>
+    </head>
+    <body>
+        <!--Un campo de texto donde se nos pida nuestro nombre de usuario
+        dentro del cuadro de texto debe aparecer la información de lo que hay que introducir-->
+        <form action="">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" type="text" value="" placeholder="Nombre de usuario">
+        <!--Campo de texto donde nos pida nuestro dni y tiene que ser ogligatorio-->
+        <br>
+        <label for="Dni">Dni</label>
+        <input id="Dni" pattern="[1-9]{8}[A-Z]" type="text" value="" placeholder="Introduzca DNI" >
+        <br>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" value="Perez" id="apellidos" placeholder="Apellido del usuario" disabled>
+        <input type="submit"><br>
+
+        <textarea  id="datos" placeholder="Introduce los datos de la descripcion" cols="30" rows="10"></textarea><br>
+
+        <input type="search" id="buscar"><input type="submit"><br>
+        <input type="password" id="clave" placeholder="Introducir clave" maxlength="3"><input type="submit"><br>
+
+        <label for="planta">Nº Planta</label>
+        <input type="number" max="10" min="0" step="2" id="planta"><input type="submit"><br>
+
+        <label for="myfile">Selecciona un archivo</label>
+        <input type="file" id="myfile" name="myfile"><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+
+        <label for="fecha">Fecha del cumple</label>
+        <input type="date" id="fecha" name="fecha"><br>
+    
+        <label for="hora">hora</label>
+        <input type="time" id="hora" name="hora"><br>
+
+        <label for="semana">Semana</label>
+        <input type="week" id="semana" name="semana"><br>
+
+        <label for="mes">mes</label>
+        <input type="month" id="mes" name="mes"><br>
+
+        <label for="color">Color</label>
+        <input type="color" id="color" name="color"><br>
+
+        <label for="rango">rango</label>
+        <input type="range" id="rango" name="range" max="10" min="0" step="2"><br>
+    </body>
+</html>

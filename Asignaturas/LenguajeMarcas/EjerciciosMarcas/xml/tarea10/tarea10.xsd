@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Ticket"> <!-- Elemento de la etiqueta principal -->
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="fecha"> <!-- Primer elemento fecha -->
+                    <xs:simpleType>
+                        <xs:restriction base="xs:date">
+                            <xs:minInclusive value="2020-01-01"/>
+                            <xs:maxInclusive value="2020-12-31"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="hora"> <!-- Segundo elemento hora -->
+                    <xs:simpleType>
+                        <xs:restriction base="xs:time">
+                            <xs:minInclusive value="00:00:00"/>
+                            <xs:maxInclusive value="23:59:59"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="precio"> <!-- Tercer elemento precio -->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="precioNoIva" type="xs:float"></xs:element>
+                            <xs:element name="iva" type="xs:float"></xs:element>
+                            <xs:element name="precioTotal" type="xs:float"></xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="moneda" type="xs:string"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>   
+                <xs:element name="forma_pago"> <!-- Cuarto elemento forma_pago -->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tarjeta">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre_cliente" type="xs:string"></xs:element>
+                                        <xs:element name="digitos_tarjeta">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:pattern value="\d{2}"></xs:pattern>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="datos_comercio"> <!-- Quinto elemento datos_comercio -->
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="direccion" type="xs:string"/>
+                            <xs:element name="cif">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="\d{9}.\w"></xs:pattern>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="telefono" type="xs:integer"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>     
+                <xs:element name="datos_compra">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre_articulo" type="xs:string"></xs:element>
+                            <xs:element name="cantidad" type="xs:integer"></xs:element>
+                            <xs:element name="precio_sin_iva" type="xs:float"></xs:element>
+                            <xs:element name="porc_IVA" type="xs:float"></xs:element>
+                            <xs:element name="pvp" type="xs:float"></xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>  
+            </xs:sequence>
+            <xs:attribute name="id_ticket" type="xs:string"></xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

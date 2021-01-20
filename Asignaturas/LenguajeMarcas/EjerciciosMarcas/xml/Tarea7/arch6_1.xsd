@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="TipoExprReg">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(cd)+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="ExpresionRegular"></xs:element>
+    <xs:element name="expresion" type="TipoExprReg"/>
+</xs:schema>

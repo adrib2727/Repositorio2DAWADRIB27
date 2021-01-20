@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+
+        /*. Realizar un programa que defina un vector llamado “vector_numeros” de 10 enteros, a
+        continuación lo inicialice con valores aleatorios (del 1 al 10) y posteriormente muestre en
+        pantalla cada elemento del vector junto con su cuadrado y su cubo.*/
+        
+        const vector_numeros = [];
+        let num = 0;
+
+        for(num = 0; num < 10; num++){
+            vector_numeros.push(Math.round(Math.random()*10));
+        }   
+        document.write(vector_numeros);
+        document.write("<br>");
+        document.write("<br>");
+
+        for(let num of vector_numeros){
+            document.write(Math.pow(num, 2), "<br>");
+        }
+
+        document.write("<br>");
+        
+        for(let num of vector_numeros){
+            document.write(Math.pow(num, 3), "<br>");
+        }
+        
+    </script>
+</body>
+</html>

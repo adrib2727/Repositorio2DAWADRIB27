@@ -1,0 +1,24 @@
+<!ELEMENT Ticket (fecha, hora, precio, forma_pago, datos_comercio, datos_compra)>
+<!ATTLIST Ticket id_ticket ID #REQUIRED>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT hora (#PCDATA)>
+    <!ELEMENT precio (precioNoIva, iva, precioTotal)>
+    <!ATTLIST precio moneda ID #REQUIRED>
+        <!ELEMENT precioNoIva (#PCDATA)>
+        <!ELEMENT iva (#PCDATA)>
+        <!ELEMENT precioTotal (#PCDATA)>
+    <!ELEMENT forma_pago (tarjeta)>
+    <!ELEMENT tarjeta (nombre_cliente, digitos_tarjeta)>
+        <!ELEMENT nombre_cliente (#PCDATA)>
+        <!ELEMENT digitos_tarjeta (#PCDATA)>
+    <!ELEMENT datos_comercio (nombre, direccion, cif, telefono)>
+        <!ELEMENT nombre (#PCDATA)>
+        <!ELEMENT direccion (#PCDATA)>
+        <!ELEMENT cif (#PCDATA)>
+        <!ELEMENT telefono (#PCDATA)>
+    <!ELEMENT datos_compra (nombre_articulo, cantidad, precio_sin_iva, porc_IVA, pvp)>
+        <!ELEMENT nombre_articulo (#PCDATA)>
+        <!ELEMENT cantidad (#PCDATA)>
+        <!ELEMENT precio_sin_iva (#PCDATA)>
+        <!ELEMENT porc_IVA (#PCDATA)>
+        <!ELEMENT pvp (#PCDATA)>

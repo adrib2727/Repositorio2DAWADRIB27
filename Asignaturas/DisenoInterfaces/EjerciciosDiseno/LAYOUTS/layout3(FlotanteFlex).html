@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 75%;
+            width: 75%;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .cabecera{
+            border: 1px solid black;
+            width: 90%;
+            text-align: center;
+            padding-bottom: 1em;
+            padding-top: 1em;
+            margin: 0 auto 0 auto; /*En este caso el auto es un 5%*/
+            background-color: blueviolet;
+            color: white;
+        }
+        .cuerpo{
+            display: flex;
+            border: 1px solid black;
+            flex-direction: row;
+            width: 90%;
+            margin: 0px auto 0px auto;
+        }
+        .lateral{
+            width: 15%;
+            background-color: violet;
+            text-align: center;
+            order: 2;
+        }
+        .central{
+            width: 90%;
+            background-color: #CAF133;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+        #pie{
+            margin: 0px auto 0px auto;
+            border: 1px solid black;
+            width: 90%;
+            text-align: center;
+            padding-bottom: 1em;
+            padding-top: 1em;
+            margin: 0 auto 0 auto; /*En este caso el auto es un 5%*/
+            background-color: blueviolet;
+            color: white;
+        }
+        .central h1{
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cabecera">
+        <h1>Cabecera Flex</h1>
+    </div>
+    <div class="cuerpo">
+        <div class="lateral">
+            <h3>Lateral</h3>
+        </div>
+        <div class="central">
+            <h1>Centro</h1>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+            <div><img src="/home/adridaw2/Imágenes/angus-sevilla.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="lateral">
+
+    </div>
+</body>
+</html>

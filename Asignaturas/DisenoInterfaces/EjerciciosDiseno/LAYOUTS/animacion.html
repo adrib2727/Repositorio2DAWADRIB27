@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        @keyframes amarilloCrece{
+            form{
+                font-size: 10pt;
+                color: black;
+            }
+            25%{
+                font-size: 15pt;
+                color: yellow;
+            }
+            50%{
+                font-size: 10pt;
+                color: green;
+            }
+            75%{
+                font-size: 15pt;
+                color: blue;
+            }
+            to{
+                font-size: 10pt;
+                color: black;
+            }
+        }
+
+        @keyframes moverH1{
+            form{
+                transform: translate(0%, 0%);
+            }
+            25%{
+                transform: translate(0%, 100%);
+            }
+            50%{
+                transform: translate(100%, 100%)
+            }
+            75%{
+                transform: translate(100%, 0%)
+            }
+            to{
+                transform: translate(0%, 0%);
+            }
+        }
+        div:hover{
+            animation: amarilloCrece 5s infinite ease-in-out 5s;
+        }
+        div{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        img:hover{
+            transform: rotate(45deg);
+        }
+        h1{
+            transition: 3s;
+            animation: moverH1 1.5s infinite ease-in;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            <h1>Animación</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Officiis recusandae rem sint voluptatem cumque aliquid veritatis amet debitis ad 
+            ducimus facere aspernatur quam consequuntur repellendus aut, est, 
+            blanditiis consectetur quos.
+        </p>
+    </div>
+</body>
+</html>

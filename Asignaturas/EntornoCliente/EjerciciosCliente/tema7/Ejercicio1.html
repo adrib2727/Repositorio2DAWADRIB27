@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrescos</title>
+</head>
+<body>
+    <!--Hacer una clase de refrescos con los atributos Marca, sabor, cantidad, nombre, tipo.
+    Métodos: Abrir, beber(Vaciar), llenar-->
+    <p id="abrir">La lata está cerrada</p>
+    <script>
+        function Refresco(marca, sabor, nombre, tipo, cantidad = "33"){ //El valor de cantidad viene dado por defecto.
+            this.marca = marca;
+            this.sabor = sabor;
+            this.cantidad = cantidad;
+            this.nombre = nombre;
+            this.tipo = tipo;
+            this.abierto = false;
+
+            this.toString = () => `Marca: ${this.marca} Cantidad: ${this.cantidad} Sabor: ${this.sabor}`;
+
+            this.abrir = () => {this.abierto = true};
+            
+            this.beber = (cantidad) => {
+                if(this.cantidad > cantidad){
+                    this.cantidad -= cantidad; //Es igual a this.cantidad - c
+                }else{
+                    this.cantidad = 0;
+                }
+            }
+        }
+
+        //Llamadas
+        var refresco = new Refresco("Coca Cola", "Cherry", "Cola", "Zero");
+        console.log(refresco);
+        document.write(refresco.toString());
+
+        document.write(refresco.abierto);
+    </script>
+</body>
+</html>

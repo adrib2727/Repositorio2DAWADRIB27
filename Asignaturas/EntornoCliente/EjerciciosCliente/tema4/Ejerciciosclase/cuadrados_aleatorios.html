@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var lado;
+        var color1, color2, color3; 
+        var posx;
+        var posy;
+
+        for(let cont=0; cont<300; cont++){
+            lado = parseInt((Math.random()*200)+50);
+            color1 = parseInt(Math.random()*255);
+            color2 = parseInt(Math.random()*255);
+            color3 = parseInt(Math.random()*255);
+
+            posx = parseInt(Math.random()*1400);
+            posy = parseInt(Math.random()*700);
+
+            document.write(`<div style="position: absolute; top: ${posy}px; left: ${posx}px; 
+            background-color: rgb(${color1}, ${color2}, ${color3});
+            height: ${lado}px; width: ${lado}px")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE mensaje SYSTEM "arch4_1.dtd">
+<mensaje>
+    <email respuesta="no">
+        <cabecera>
+            <emisor>Mercadona</emisor>
+            <receptor>Particular</receptor>
+            <fecha>30/11/20</fecha>
+        </cabecera>
+        <asunto>Envío</asunto>
+        <texto>Te enviamos la compra</texto>
+    </email>
+</mensaje>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi web</h1>
+    <script>
+
+        if(document.cookie){ //Si la cookie existe
+            let cooki1 = document.cookie.split("; ");
+            for(let c of cooki1){
+                [nombre, valor] = c.split("=");
+                if(nombre == "contador"){
+                    document.cookie = `contador = ${parseInt(valor)+1}`; //Cookie actualizada.
+                }
+            }
+        }else{
+            document.cookie = "nombre=Adrian";
+            document.cookie = "contador=1";
+        }
+        document.write(document.cookie)
+        //Split convierte cadenas en arrays, delimitando elementos a través de lo que pongas, en este caso la coma
+        
+        //Controlar las veces que se entra a la página.
+
+    </script>
+</body>
+</html>
