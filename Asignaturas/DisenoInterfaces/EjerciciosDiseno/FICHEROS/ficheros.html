@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficheros 1</title>
+    <style>
+        #zona_DnD{
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="fichero" name="files[]" multiple>
+    <!-- Lista -->
+    <div>
+        <ul id="lista"></ul>
+    </div>
+    <div>
+        <ul id="lista2"></ul>
+    </div>
+    <h3>Arrastra aquí los ficheros...</h3>
+    <div id="zona_DnD"></div>
+    <div id="contenido">
+
+    </div>
+    <img src="" alt="" id="imagen">
+    <script>
+        document.getElementById("fichero").addEventListener("change", manejadorSelecc);
+
+        function manejadorSelecc(ev){
+            //En el evento se carga la lista de ficheros.
+            let ficheros = ev.target.files;
+            let salida = [];
+
+            for(let fic of ficheros){
+                salida.push(`<li><strong>${fic.name}</strong> ${fic.type} bytes.</li>`);
+                //leerFichero(fic); //Variable que coge la función como parámetro.
+                leerImagen(fic);
+                leerArrayBytes(fic);
+            }
+            document.getElementById("lista").innerHTML = salida.join("");
+        }
+
+        document.getElementById("zona_DnD").addEventListener("dragover", manejadorDragOver);
+        document.getElementById("zona_DnD").addEventListener("drop", manejadorDrop);
+
+        function manejadorDragOver(ev){
+            ev.stopPropagation(); //Para no poder seleccionar el de abajo.
+            ev.preventDefault();
+            ev.dataTransfer.dropEffect = "copy";
+        }
+
+        function manejadorDrop(ev){
+            ev.stopPropagation();
+            ev.preventDefault();
+
+            let ficheros = ev.dataTransfer.files;
+            let salida = [];
+
+            for(let fic of ficheros){
+                salida.push(`<li><strong>${fic.name}</strong> ${fic.type} bytes.</li>`);
+            }
+            document.getElementById("lista2").innerHTML = salida.join("");
+        }
+
+        function leerFichero(fichero){
+            //Se crea un objeto de tipo file reader.
+            let lector = new FileReader();
+            lector.addEventListener("load", (ev) => {
+                let texto = ev.target.result; //Dentro de result está el contenido del fichero, y se guarda en la cariable texto.
+                document.getElementById("contenido").innerHTML = texto; //Muestra el texto en el HTML
+            });
+            lector.readAsText(fichero); //Cuando haya leido el contenido del fichero, arroja un evento.
+        }
+
+        function leerImagen(fichero){
+            let lector = new FileReader();
+            lector.addEventListener("load", (ev) => {
+                let dataURL = ev.target.result;
+                document.getElementById("imagen").src = dataURL; //Pasa a la etiqueta scr el dataURL.
+            });
+            lector.readAsDataURL(fichero);
+        }
+
+        function leerArrayBytes(fichero){
+            let lector = new FileReader();
+            lector.addEventListener("load", (ev) => {
+                let arrayBuffer = ev.target.result;
+                console.log(arrayBuffer.byteLength);
+                console.log(arrayBuffer);
+            });
+            lector.readAsArrayBuffer(fichero);
+        }
+    </script>
+</body>
+</html>
