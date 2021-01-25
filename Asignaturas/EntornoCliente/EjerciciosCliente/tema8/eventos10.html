@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 10</title>
+    <style>
+        .contenedor{
+            border: 2px solid orange;
+            display: flex;
+        }
+        .origen{
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 10px;
+        }
+        .destino{
+            flex-basis: 100%;
+            flex-grow: 1;
+            padding: 10px;
+        }
+        .arrastrable{
+            background-color: paleturquoise;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="origen">
+            <div id="viajero" class="arrastrable" draggable="true">
+                Arrastrable
+            </div>
+        </div>
+        <div class="destino" id="destino">
+            Destino
+        </div>
+    </div>
+    <script>
+        /*Dragstart*/
+        let arrastrable = document.getElementById("viajero");
+        let destino = document.getElementById("destino");
+
+
+        arrastrable.addEventListener("dragstart", ondragstart);
+        function ondragstart(ev){
+            ev.dataTransfer.setData("text/plain", ev.target.id)
+            ev.target.style.border = "2px dashed red";
+        }
+
+        destino.addEventListener("dragover", ondragover)
+        function ondragover(ev){
+            ev.target.innerHTML = "Alguien está por encima";
+            ev.preventDefault();
+        }
+
+        //Al soltar encima.
+        destino.addEventListener("drop", ondrop)
+        function ondrop(ev){
+            let id = ev.dataTransfer.getData("text");
+            let viajero = document.getElementById(id);
+            let dondeSuelto = ev.target;
+            
+            dondeSuelto.appendChild(viajero);
+            ev.dataTransfer(dondeSuelto);
+        }
+
+
+    </script>
+</body>
+</html>
