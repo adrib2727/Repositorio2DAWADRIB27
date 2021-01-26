@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>JQuery 1</title>
+    <style>
+        .grande{
+            font-size: 2em;
+        }
+        .pequeno{
+            font-size: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Empezamos con JQuery</h1>
+    <h1>Otra etiqueta</h1>
+    <p>Texto que cambia de color</p>
+    <p>Texto pequeño</p>
+    <input type="text" name="" id="">
+
+    <script>
+        $(document).ready(function(){
+            $("h1").click(() => {
+                $("p")[0].style.color="red";
+            });
+        });
+
+        /*Añadir texto a una etiqueta*/
+        var cuadroTexto = $("input"); //Coge un input.
+        cuadroTexto.keyup(function(){
+            $("#info").html(cuadroTexto.val());
+        });
+        /*Añadir o quitar una clase a una etiqueta*/
+        $("p.first").addClass("grande");
+        $("p").removeClass("grande")
+
+        /*Añadir un elemento al principio o al final*/
+        $(".contenedor").append("<p>Hola soy nuevo</p>");
+        let $contenedor = $(".contenedor");
+        $contenedor.prepend("<p>Un pe al principio</p>");
+    </script>
+</body>
+</html>

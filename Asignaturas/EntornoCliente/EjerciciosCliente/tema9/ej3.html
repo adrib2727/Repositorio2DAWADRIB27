@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function miFalladora(){
+            let x = parseInt(Math.random()*4);
+            let errores = [];
+            errores.push(new EvalError("1"));
+            errores.push(new RangeError("2"));
+            errores.push(new ReferenceError("3"));
+            errores.push(new EvalError("4"));
+            errores.push(new URIError("5"));
+            console.log(x);
+            throw errores[x];
+        }
+        try{
+            miFalladora();
+        }catch(e){
+            informacionError(e);
+        }finally{
+            console.log("Siempre me ejecuto");
+        }
+
+        function informacionError(e){
+            console.log(e.name, " ", e.message);
+        }
+
+    </script>
+</body>
+</html>

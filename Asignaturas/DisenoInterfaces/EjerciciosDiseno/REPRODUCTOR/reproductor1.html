@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="reproductor.css">
     <title>Reproductor</title>
 </head>
-<body>  
+<body>
     <div class="contenedor">
         <div class="reproductor">
             <h2>Reproductor</h2>
             <!--Mediante un botón se introducirá la direcciónd de la canción en src.-->
-            <audio id="miAudio" src="" controls></audio>
+            <h3></h3>
+            <audio id="miAudio" src=""></audio>
             <button id="bPlay" class="btn btn-dark">Play</button>
             <button id="bPause" class="btn btn-dark">Pausa</button>
             <button id="bStop" class="btn btn-dark">Stop</button>
-            <button id="bSiguiente" class="btn btn-light">Siguiente</button>
-            <button id="bAnterior" class="btn btn-light">Anterior</button>
+            <button id="bSiguiente" class="btn btn-primary">Siguiente</button>
+            <button id="bAnterior" class="btn btn-primary">Anterior</button>
             <p>Volumen 
                 <input type="range" name="" id="volumen" min="0" max="1" value="1" step=".1">
             </p>
@@ -27,10 +28,9 @@
             </p>
         </div>
         <div class="lista">
-            <h2>Lista reproducción</h2>
+            <h2>Lista de reproducción</h2>
             <ul type="none">
-                <li><h4>1. Smooth Criminal</h4></li>
-                <li><h4>2. In the Army Now</h4></li>
+                <li><h3 id="listaRep">hola</h3></li>
             </ul>
             
         </div>
