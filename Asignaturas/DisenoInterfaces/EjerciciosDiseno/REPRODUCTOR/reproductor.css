@@ -1,5 +1,5 @@
 body{
-    background-color: lightslategrey
+    background-image: url(fotos/Amplificador-Marshall.png);
 }
 .contenedor{
     display:flex;
@@ -8,7 +8,7 @@ body{
     justify-content: space-around;
 }
 h2{
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     padding: 1em;
     text-align: center;
     margin-top: 3%;
@@ -43,4 +43,11 @@ button{
 .lista ul{
     text-align: center;
     padding-left: 0px;
+}
+button{
+    border-radius: 8px;
+    padding: 8px 8px 8px 8px;
+    border: 2px solid gold;
+    color: white;
+    background-color: black;
 }
