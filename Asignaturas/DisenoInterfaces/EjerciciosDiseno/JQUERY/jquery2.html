@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Lo quita</h1>
+        <h1>Lo quita</h1>
+        <h2>No se ve la etiqueta</h2>
+        <h2>No se ve la etiqueta</h2>
+        <input type="password">
+    </div>
+    <script>
+        $(document).ready(function(){
+            //Modificar CSS de una etiqueta FORMA 1.
+            $("h1").css("color", "blue");
+            //Mostrar CSS de una etiqueta FORMA 2.
+            $("h2").css({backgroundColor:"yellow", fontSize:"0.75em"});
+            //Modificar atributos de una etiqueta.
+            $("input").attr("type", "text").attr("width", "50px");
+        });
+    </script>
+</body>
+</html>
