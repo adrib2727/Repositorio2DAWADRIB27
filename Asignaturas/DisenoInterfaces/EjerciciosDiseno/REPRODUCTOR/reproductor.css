@@ -1,5 +1,6 @@
+  
 body{
-    background-color: lightslategrey
+    background-image: url(fotos/Amplificador-Marshall.png);
 }
 .contenedor{
     display:flex;
@@ -8,11 +9,20 @@ body{
     justify-content: space-around;
 }
 h2{
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     padding: 1em;
     text-align: center;
     margin-top: 3%;
     border-radius: 5px;
+    border: 1px solid black;
+}
+.reproductor{
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 1%;
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
 }
 p{
     margin: 5px;
@@ -25,8 +35,20 @@ button{
     margin-top: 10px;
 }
 .lista{
-    text-align: center;
+    background-color: white;
+    padding: 20px;
+    margin-top: 1%;
+    border-radius: 5px;
+    border: 2px solid black;
 }
 .lista ul{
     text-align: center;
+    padding-left: 0px;
+}
+button{
+    border-radius: 8px;
+    padding: 8px 8px 8px 8px;
+    border: 2px solid gold;
+    color: white;
+    background-color: black;
 }

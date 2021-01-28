@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="reproductor.css">
     <title>Reproductor</title>
 </head>
-<body>  
+<body>
     <div class="contenedor">
         <div class="reproductor">
             <h2>Reproductor</h2>
             <!--Mediante un botón se introducirá la direcciónd de la canción en src.-->
-            <audio id="miAudio" src="" controls></audio>
-            <button id="bPlay" class="btn btn-dark">Play</button>
-            <button id="bPause" class="btn btn-dark">Pausa</button>
-            <button id="bStop" class="btn btn-dark">Stop</button>
-            <button id="bSiguiente" class="btn btn-light">Siguiente</button>
-            <button id="bAnterior" class="btn btn-light">Anterior</button>
+            <h3></h3>
+            <audio id="miAudio" src=""></audio>
+            <button id="bPlay">Play</button>
+            <button id="bPause">Pausa</button>
+            <button id="bStop">Stop</button>
+            <button id="bSiguiente" class="antsig">Siguiente</button>
+            <button id="bAnterior" class="antsig">Anterior</button>
             <p>Volumen 
                 <input type="range" name="" id="volumen" min="0" max="1" value="1" step=".1">
             </p>
@@ -27,23 +26,10 @@
             </p>
         </div>
         <div class="lista">
-            <h2>Lista reproducción</h2>
-            <ul type="none">
-                <li><h4>1. Smooth Criminal</h4></li>
-                <li><h4>2. In the Army Now</h4></li>
-            </ul>
-            
+            <h2>Lista de reproducción</h2>
+            <ul type="none"></ul>
         </div>
     </div>
     <script src="reproductor.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-        integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
-    </script>
 </body> 
 </html>
