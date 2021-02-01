@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const datos = [{
+            id = 1,
+            titulo: "The Godfather",
+            anio: 1973
+        },{
+            id: 2,
+            titulo: "The Godfather Part II",
+            anio: 1974
+        },{
+            id: 3,
+            titulo: "The Godfather Part III",
+            anio: 1991
+        }];
+
+        /*Devuelve el Array*/
+        const getDatos = () => {
+            return new Promise((resultado, reject) => {
+                setTimeout(() => {
+                    resultado(datos);
+                }, 1500);
+            });
+        }
+
+        getDatos().then(function(datos){
+            console.log(datos);
+        });
+
+        
+        
+    </script>
+</body>
+</html>

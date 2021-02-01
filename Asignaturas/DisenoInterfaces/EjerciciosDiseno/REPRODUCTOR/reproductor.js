@@ -1,4 +1,3 @@
-  
 var play = document.getElementById("bPlay"); //Botón de play.
 var pause = document.getElementById("bPause"); //Botón de pausa.
 var varStop = document.getElementById("bStop"); //Botón de parar.
@@ -10,8 +9,6 @@ var reproductor = document.getElementById("miAudio"); //Captura de la etiqueta a
 var h3 = document.getElementsByTagName("h3")[0];
 var lista = document.getElementsByTagName("ul")[0];
 var lista_li = document.querySelectorAll("li");
-console.log(lista);
-console.log(lista_li);
 /*Array que tiene las direcciones de los nombres de las
 canciones*/
 var arrayCan = ["canciones/Smooth Criminal.mp3", "canciones/Back In Black.mp3",
@@ -26,16 +23,15 @@ reproductor.setAttribute("src", arrayCan[posicion]);
 h3.innerHTML = arrayNombres[posicion]; 
 /*Mostrar la lista de los nombres de reproducción.*/
 
-
-
 for(let cancion of arrayNombres){ //Recorre el array de nombres.
     let nuevoLi = document.createElement("li"); //Crea un li.
     nuevoLi.innerHTML = cancion; //Asigna a los li los elementos del Array.
     /*Crea un evento de click al li y captura el evento.*/
     nuevoLi.addEventListener("click", (e) => {
-        /* alert(e.target.innerHTML); */
-        posicion = arrayCan.indexOf(e.target.innerHTML);
-        reproductor.play(arrayCan[posicion]);
+        posicion = arrayNombres.indexOf(e.target.innerHTML);
+        h3.innerHTML = arrayNombres[posicion];
+        reproductor.setAttribute("src", arrayCan[posicion]);
+        reproductor.play();
     });
     lista.appendChild(nuevoLi);
 }

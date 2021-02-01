@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* function saluda(texto, callback){ //Se le puede pasar una función como parámetro, en callback.
+            callback("texto");
+        }
+
+        saluda("Adri", function(texto){
+            alert("Hola "+ texto);
+        }); */
+
+        /*Sumar dos números, calcular el cuadrado, se divide entre dos y resta 100*/
+        function sumar(n1, n2, func){ //Función de suma.
+            func(n1 + n2);
+        }
+        function cuadrado(num, func){ //Función de cuadrado.
+            func(num * num);
+        }
+        function restar_entre_dos(num, func){ //Función de dividir entre 2.
+            func(num / 2);
+        }
+        function restar100(num, func){
+            func(num - 100);
+        }
+
+        sumar(8, 5, function(resultadoSuma){
+            document.write("La suma es: " + resultadoSuma + "<br>");
+            /*Paso la función de cuadrado, se hace una llamada de funciones dentro de la otra llamada*/
+            cuadrado(resultadoSuma, function(resultadoCuadrado){
+                document.write("El cuadrado de la suma es: " + resultadoCuadrado + "<br>");
+                restar_entre_dos(resultadoCuadrado, function(resultadoEntre2){
+                    document.write("Dividido entre dos es: " + resultadoEntre2 + "<br>");
+                    restar100(resultadoEntre2, function(resul_menos100){
+                        document.write("Restandole 100 es: " + resul_menos100);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

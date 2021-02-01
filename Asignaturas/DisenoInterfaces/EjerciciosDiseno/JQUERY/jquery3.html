@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>JQuery 3</title>
+    <style>
+        .grande{
+            font-size: 2em;
+            color: red;
+        }
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Lo quita</h1>
+        <h1>Lo quita</h1>
+        <h2>No se ve la etiqueta</h2>
+        <h2>No se ve la etiqueta</h2>
+        <input type="password">
+        <button id="boton1">Añadir</button>
+        <button id="boton2">Eliminar todo</button>
+        <p id="ua">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis maxime cupiditate nulla possimus consequuntur sequi, modi, in rerum vero eaque illo alias laudantium, porro animi similique repudiandae aliquam praesentium ullam?
+        </p>
+        <ul>
+            
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            let parrafo = $("#ua");
+            let boton1 = $("#boton1");
+            let boton2 = $("#boton2");
+
+            /* Un solo click */
+            parrafo.click((ev) => {
+                parrafo.addClass("grande");
+            });
+            /* Al dar doble click se quita el parrafo resaltado*/
+            parrafo.dblclick(() => {
+                parrafo.toggleClass("grande");
+            });
+            /* Cuando se levanta la tecla */
+            $("input").keyup(function(){
+                parrafo.html($("input").val());
+            });
+            /*Selecciona toda la lista, añadiendo */
+            boton1.click(function(){
+                $("ul").append(`<li> ${$("input").val()} <button class="boton3">Eliminar</button></li>`);
+                /*Botón del */
+                $(".boton3").click((ev) => {
+                    ev.target.parentElement.remove();
+                }); 
+            });
+            /* Elimina todos los elementos li */
+            boton2.click(() => {
+                $("li").remove();
+            });
+        });
+    </script>
+</body>
+</html>

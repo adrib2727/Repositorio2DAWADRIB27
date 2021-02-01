@@ -19,6 +19,8 @@ body{
     margin-top: 3%;
     margin-right: 5px;
     border: 1px solid black;
+    padding-top: 10px;
+    padding-left: 20px;
 }
 .fila{
     width: 100%;

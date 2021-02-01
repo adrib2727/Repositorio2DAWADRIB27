@@ -14,13 +14,13 @@ enviar.addEventListener("click", () => {
     }else{ //Tamaño correcto.
         info.innerHTML = "Tamaño correcto";
         //Bucle que recorre el input de la palabra.
-        let nuevaFila = document.createElement("div");
-        document.body.appendChild(nuevaFila);
-        nuevaFila.classList.add("fila");
+        let nuevaFila = document.createElement("div"); //Crea un div.
+        document.body.appendChild(nuevaFila); //Mete el div en el body.
+        nuevaFila.classList.add("fila"); //Le añade una clase llamada fila.
 
         for(letra of palabra.value){
-            let nuevoDiv = document.createElement("div");
-            nuevoDiv.innerHTML = letra;
+            let nuevoDiv = document.createElement("div"); //Crea un div 
+            nuevoDiv.innerHTML = letra; //
             nuevoDiv.classList.add("cuadrado");
             nuevaFila.appendChild(nuevoDiv);
         }
