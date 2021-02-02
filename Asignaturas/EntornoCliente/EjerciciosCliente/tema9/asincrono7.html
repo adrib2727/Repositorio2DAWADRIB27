@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* function saluda(texto, callback){ //Se le puede pasar una función como parámetro, en callback.
+            callback("texto");
+        }
+
+        saluda("Adri", function(texto){
+            alert("Hola "+ texto);
+        }); */
+
+        /*Sumar dos números, calcular el cuadrado, se divide entre dos y resta 100*/
+        function sumar(n1, n2){ //Función de suma.
+            return new Promise((res, rej) => {
+                res(n1 + n2);
+            });
+            
+        }
+        function cuadrado(num){ //Función de cuadrado.
+            return new Promise((res, rej) => {
+                res(num * num);
+            });
+            
+        }
+        function restar_entre_dos(num){ //Función de dividir entre 2.
+            return new Promise((res, rej) => {
+                res(num / 2);
+            });
+            
+        }
+        function restar100(num){
+            return new Promise((res, rej) => {
+                res(num - 100);
+            });
+            
+        }
+
+        sumar(8, 5)
+        .then((suma) => cuadrado(suma))
+        .then((cuadrado) => restar_entre_dos(cuadrado))
+        .then((restado) => restar100(restado))
+        .then((resultado) => console.log(resultado));
+    </script>
+</body>
+</html>

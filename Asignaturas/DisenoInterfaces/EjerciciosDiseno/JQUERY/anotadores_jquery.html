@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <title>Anotadores</title>
+    <style>
+        #contenedor_principal{
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        #anotaciones{
+            border: 1px solid fuchsia;
+            flex-basis: 55%;
+        }
+        #menu{
+            border: 1px solid purple;
+            flex-basis: 30%;
+        }
+        .fila{
+            border: 1px solid orchid;
+            display: flex;
+        }
+        h2, p{
+            flex-basis: 15%;
+            text-align: center;
+            padding: 2px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .botones{
+            flex-basis: 58%;
+        }
+        label,input{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        fieldset{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor_principal">
+        <div id="anotaciones">
+            <div class="fila">
+                <h2>Dorsal</h2><h2>Jugador/a</h2><h2>Puntos</h2><h2 class="botones">Botones</h2>
+            </div>
+            <div class="fila">
+                <p>1</p>
+                <p>Carolina Perez</p>
+                <p>4</p>
+                <p class="botones"><button>Seleccionar</button><button>Eliminar</button></p>
+            </div>
+        </div>
+        <div id="menu">
+            <fieldset>
+                <strong>Datos</strong>
+                <input type="text" placeholder="Introduce el nombre" id="nombre">
+                <input type="text" placeholder="Introduce el dorsal" id="dorsal">
+                <button id="botAnadir">Añadir</button>
+            </fieldset>
+            <fieldset>
+                <strong>Puntos</strong>
+                <input type="text" placeholder="Introduce los puntos" id="puntos">
+                <button id="botAct">Actualizar</button>
+                <button id="botUno">Uno</button>
+                <button id="botDos">Dos</button>
+                <button id="botTres">Triple</button>
+            </fieldset>
+        </div>
+    </div>
+    <script>
+        $(document).ready(() => {
+            $("#botAnadir").on("click", () => {
+                $("#anotaciones").append(`<div class="fila">
+                <p>${$("#dorsal").val()}</p>
+                <p>${$("#nombre").val()}</p>
+                <p>${$("#puntos").val()}</p>
+                <p class="botones"><button>Seleccionar</button><button>Eliminar</button></p>
+                </div>`);
+            });
+        });
+    </script>
+</body>
+</html>

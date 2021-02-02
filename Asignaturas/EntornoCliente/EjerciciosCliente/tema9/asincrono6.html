@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Acceder a la base de datos y traer todos los usuarios.
+        Buscaremos un id de un usuario.
+        Con el id buscaremos el id de su profesión con el id de su profesión buscamos el nombre*/
+
+        const usuarios = [
+            {id: 1, nombre: "Ricardo", profesion_id: 1},
+            {id: 1, nombre: "Daniel", profesion_id: 1},
+            {id: 1, nombre: "Antonio", profesion_id: 2}
+        ];
+
+        const profesion = {
+            1: "Programador",
+            2: "Diseñador",
+            3: "Talabardero"
+        }
+
+        function getUsuarios(callback){
+            //Promesa.
+            return new Promise((resuelto, rechazado) => {
+                setTimeout(() => {
+                    let resultado = usuarios;
+                    resuelto(resultado);
+                }, 1200);
+            });
+        }
+        //Le pasa una función con uno o varios parámetros, cuando es mayor o igual que 10, se mete en el nuevo array
+        function getUsuario(id, callback){
+            return new Promise((resuelto, rechazado) => {
+                setTimeout(() => {
+                let arrayFiltrado = usuarios.filter((x) => x.id == id);
+                let usuario = arrayFiltrado[0];
+                resuelto(usuario);
+                }, 1200);
+            });
+  
+        }
+        function getProfesion(id, callback){
+            return new Promise((resuelto, rechazado) => {
+                setTimeout(() => {
+                let nombreProf = profesion[id];
+                resuelto(nombreProf);
+                }, 1200)
+            })
+            
+        }
+
+        /*Pide lista de usuarios*/
+        /*Cuando estén todos los usuarios, entonces realizar la siguiente función.*/
+        /* getUsuarios()
+        .then((usuarios) => getUsusario(usuarios[2].id)
+        .then((usuario) => getProfesion(usuario.profesion_id))
+        .then((nombreProf) => console.log(nombreProf))
+        .catch((err) => {console.log("Error en las promesas", err)};
+        */
+        Promise.all([getProfesion(1), getProfesion(2), getProfesion(3)])
+        .then((respuesta) => console.log(respuesta));
+    </script>
+</body>
+</html>

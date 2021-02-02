@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Acceder a la base de datos y traer todos los usuarios.
+        Buscaremos un id de un usuario.
+        Con el id buscaremos el id de su profesión con el id de su profesión buscamos el nombre*/
+
+        const usuarios = [
+            {id: 1, nombre: "Ricardo", profesion_id: 1},
+            {id: 1, nombre: "Daniel", profesion_id: 1},
+            {id: 1, nombre: "Antonio", profesion_id: 2}
+        ];
+
+        const profesion = {
+            1: "Programador",
+            2: "Diseñador"
+        }
+
+        function getUsuarios(callback){
+            setTimeout(() => {
+                let resultado = usuarios;
+                callback(resultado);
+            }, 1200);
+        }
+        //Le pasa una función con uno o varios parámetros, cuando es mayor o igual que 10, se mete en el nuevo array
+        function getUsuario(id, callback){
+            setTimeout(() => {
+                let arrayFiltrado = usuarios.filter((x) => x.id == id);
+                let usuario = arrayFiltrado[0];
+                callback(usuario);
+            }, 1200);
+        }
+        function getProfesion(id, callback){
+            setTimeout(() => {
+                let nombreProf = profesion[id];
+                callback(nombreProf);
+            }, 1200)
+        }
+
+        getUsuarios((usuariosDevueltos) => {
+            const usuarioID = usuariosDevueltos[0].id;
+            
+            getUsuario(usuarioID, (usuarioDevuelto) => {
+                const profesionId = usuarioDevuelto.profesion_id;
+
+                getProfesion(profesionId, (profesionDevuelto) => {
+                    console.log(`La profesión es: ${profesionDevuelto}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
