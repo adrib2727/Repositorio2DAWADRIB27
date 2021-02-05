@@ -61,8 +61,19 @@
         .then((nombreProf) => console.log(nombreProf))
         .catch((err) => {console.log("Error en las promesas", err)};
         */
-        Promise.all([getProfesion(1), getProfesion(2), getProfesion(3)])
-        .then((respuesta) => console.log(respuesta));
+
+        /* Promise.all([getProfesion(1), getProfesion(2), getProfesion(3)])
+        .then((respuesta) => console.log(respuesta)); */
+
+        async function devolverProfesion(){
+            let usuarios = await getUsuarios();
+            let usuario = await getUsuario(usuarios[2].id);
+            let profesion = await getProfesion(usuario.profesion_id);
+            
+            return profesion;
+        }
+        /* La promesa te dice que se ejecutará pero no se ejecuta porque no le da tiempo.*/
+        console.log(devolverProfesion()); //
     </script>
 </body>
 </html>

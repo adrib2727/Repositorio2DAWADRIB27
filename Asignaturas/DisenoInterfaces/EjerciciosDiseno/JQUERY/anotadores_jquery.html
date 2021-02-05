@@ -43,6 +43,9 @@
         fieldset{
             margin-top: 10px;
         }
+        .seleccionada{
+            background-color: lightcoral;
+        }
     </style>
 </head>
 <body>
@@ -50,12 +53,6 @@
         <div id="anotaciones">
             <div class="fila">
                 <h2>Dorsal</h2><h2>Jugador/a</h2><h2>Puntos</h2><h2 class="botones">Botones</h2>
-            </div>
-            <div class="fila">
-                <p>1</p>
-                <p>Carolina Perez</p>
-                <p>4</p>
-                <p class="botones"><button>Seleccionar</button><button>Eliminar</button></p>
             </div>
         </div>
         <div id="menu">
@@ -77,13 +74,31 @@
     </div>
     <script>
         $(document).ready(() => {
+            function Seleccionar(){
+                if($(".seleccionada") == $(this).parent().parent()){
+                    alert("Es la misma");
+                }
+                /*Elemento que se ha clickado (THIS)*/
+                $(this).parent().parent().addClass("seleccionada");
+                $(this).next().removeAttr("disabled");
+                $(this).next().click(() => {
+                    $(this).parent().parent().remove();
+                });
+            }
+            /*Botón actualizar*/
+            $("#botAct").click(() => {
+                $(".seleccionada").children(":eq(2)").text($("puntos").val());
+            });
+            /*Añade los datos de la persona participante*/
             $("#botAnadir").on("click", () => {
                 $("#anotaciones").append(`<div class="fila">
                 <p>${$("#dorsal").val()}</p>
                 <p>${$("#nombre").val()}</p>
-                <p>${$("#puntos").val()}</p>
-                <p class="botones"><button>Seleccionar</button><button>Eliminar</button></p>
+                <p>${4}</p>
+                <p class="botones"><button class='botSeleccionar'>Seleccionar</button><button>Eliminar</button></p>
                 </div>`);
+                /*Manejador del botón seleccionar*/
+                $(".botSeleccionar").on("click", Seleccionar);
             });
         });
     </script>

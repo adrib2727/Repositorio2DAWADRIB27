@@ -1,29 +1,76 @@
 body{
     background-color: lightsteelblue;
 }
-#form1{
-    float: left;
-    border: 1px solid black;
-    padding: 20px 20px 20px 20px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+#contenedor_principal{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+#formulario{
+    background-color: lightgoldenrodyellow;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 2%;
+    border: 2px solid black;
+    text-align: center;
     border-radius: 5px;
-    background-color: beige;
 }
 .cuadrado{
-    float:right;
-    height: 50px;
-    width: 50px;
+    margin: 5px;
     background-color: white;
-    margin-top: 3%;
-    margin-right: 5px;
+    font-size: 3em;
     border: 1px solid black;
-    padding-top: 10px;
-    padding-left: 20px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+#cabecera{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid black;
+}
+.titulo_juego{
+    font-size: x-large;
+}
+.estado_juego{
+    font-size: 20px;
+}
+input{
+    height: 30px;
+    width: 70%;
+    font-size: x-large;
+}
+button{
+    background-color: rgb(49, 49, 201);
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 35px;
+    font-size: 20px;
 }
 .fila{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-    background-color: yellow;
-
+}
+#titulo_dingo{
+    margin-top: 65px;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+h4{
+    margin-left: 5px;
 }
