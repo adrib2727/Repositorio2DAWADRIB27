@@ -79,7 +79,7 @@
                     alert("Es la misma");
                 }
                 /*Elemento que se ha clickado (THIS)*/
-                $(this).parent().parent().addClass("seleccionada");
+                $(this).parent().parent().addClass("seleccionada"); //Seleccionada se crea nueva.
                 $(this).next().removeAttr("disabled");
                 $(this).next().click(() => {
                     $(this).parent().parent().remove();
@@ -87,14 +87,14 @@
             }
             /*Botón actualizar*/
             $("#botAct").click(() => {
-                $(".seleccionada").children(":eq(2)").text($("puntos").val());
+                $(".seleccionada").children(":eq(2)").text($("#puntos").val());
             });
             /*Añade los datos de la persona participante*/
             $("#botAnadir").on("click", () => {
                 $("#anotaciones").append(`<div class="fila">
                 <p>${$("#dorsal").val()}</p>
                 <p>${$("#nombre").val()}</p>
-                <p>${4}</p>
+                <p>${0}</p>
                 <p class="botones"><button class='botSeleccionar'>Seleccionar</button><button>Eliminar</button></p>
                 </div>`);
                 /*Manejador del botón seleccionar*/

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <input type="text">
+        <button id="boton" class="ui-button ui-widget ui-corner-all">Abrir</button>
+        <div id="dialog" title="Dialog Basico">
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque ut officia amet sapiente illo 
+            quibusdam hic dolore quidem laborum tenetur, modi cum quae alias laboriosam numquam 
+            incidunt perspiciatis aliquam tempore.
+        </p>
+        </div>
+        <script>
+            $(function(){
+                /*Primero para que funciones es necesario que haya una configuración sobre el dialog.*/
+                $('#dialog').dialog({
+                    autoOpen:false,
+                    show:{effect: "blind", duration:1000},
+                    hide:{effect: "explode", durarion: 500},
+                });
+                $('#boton').click(() => {
+                    $('#dialog').dialog("open");
+                })
+            });
+        </script>
+    </body>
+</html>
+                

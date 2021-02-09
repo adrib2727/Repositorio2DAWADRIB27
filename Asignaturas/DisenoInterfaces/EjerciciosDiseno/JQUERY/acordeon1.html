@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            #acordeonRedimensionable{
+                padding: 20px;
+                width: 400px;
+                height: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="acordeonRedimensionable">
+            <div id="acordeon">
+                <h3>Radio Group</h3>
+                <div>
+                    <fieldset>
+                        <legend>Selecciona el deporte</legend>
+                        <label for="r1">Natación</label>
+                        <input type="radio" name="r1" id="r1">
+                        <label for="r2">Atletismo</label>
+                        <input type="radio" name="r1" id="r2">
+                        <label for="r3">Ciclismo</label>
+                        <input type="radio" name="r1" id="r3">
+                    </fieldset>
+                    <p><input type="text" title="Ejemplo del Tooltip"></p>
+                    <p>Acordeon</p>
+                </div>
+                <h3>CheckBox</h3>
+                <div>
+                    <fieldset>
+                        <legend>Selecciona el deporte</legend>
+                        <label for="c1">Natación</label>
+                        <input type="checkbox" name="c1" id="c1">
+                        <label for="c2">Atletismo</label>
+                        <input type="checkbox" name="c1" id="c2">
+                        <label for="c3">Ciclismo</label>
+                        <input type="checkbox" name="c1" id="c3">
+                    </fieldset>
+                    <p><a href="" title="Visita Canadá :)">Ir a Canadá</a></p>
+                    <p>Acordeon</p>
+                </div>
+                <h3>Sección 3</h3>
+                <div>
+                    <p>Acordeon</p>
+                </div>
+                <h3>Sección 4</h3>
+                <div>
+                    <p>Acordeon</p>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(function(){   
+                $("fieldset input").checkboxradio();
+                $("#acordeonRedimensionable").resizable({
+                    minHeight:140,
+                    minWidth:200,
+                    resize:function(){
+                        $("#acordeon").accordion("refresh");
+                    }
+                });
+                $("#acordeon").accordion(
+                    {collapsible:true},
+                    {heightStyle:"fill"}
+                );
+                $(document).tooltip({
+                    track:true,
+                    show:{
+                        effect:"slideDown",
+                        delay:500
+                    },
+                    hide:{
+                        effect:"explode",
+                        delay:500
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
+                

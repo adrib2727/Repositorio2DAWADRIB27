@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <p>Enlace que redirecciona a <a href="https://www.google.es"> Google</a></p>
+        <p>Enlace que redirecciona a <a href="https://seattle.gov"> Seattle</a></p>
+
+        <div id="modal" title="Pregunta">
+            <p><span class="ui-icon ui-icon-alert"></span>¿Quieres salir?</p> 
+        </div>
+        <script>
+            $(function(){
+                /*Primero para que funciones es necesario que haya una configuración sobre el dialog.*/
+                $('#modal').dialog({
+                    height: "auto",
+                    width: 400,
+                    modal: true,
+                    show:{effect: "blind", duration:1000},
+                    hide:{effect: "explode", durarion: 500},
+                    buttons:{
+                        "Ir a Google": function(){
+                            $(this).dialog("close");
+                            location = "https://www.google.es";
+                        },
+                        "Quedarse en la página": function(){
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+                /*Evento que no permitirá que dandole al <a> se vaya directamente a Google, estará obligado a 
+                volver a salir la pestaña del mensaje.*/
+                $('a').click(function(event){
+                    event.preventDefault();
+                    $('#modal').dialog("open");
+                });
+            });
+        </script>
+    </body>
+</html>
+                

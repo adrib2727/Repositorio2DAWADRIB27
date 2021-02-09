@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery UI Button - Default functionality</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <h2>Botones con CSS</h2>
+        <button class="ui-button ui-widget ui-corner-all">Botón</button>
+        <a href="" class="ui-button ui-widget ui-corner-all">Botón con enlaces<span class="ui-icon ui-icon-gear ui-widget-icon"></span></a>
+        <input type="submit" value="Botón submit" class="ui-button ui-widget ui-corner-all"> 
+        <script>
+            $(function(){
+                $('input').eq(0).button({icon:"ui-icon-gear", iconPosition: "top"});
+                $('button').eq(0).button({icon:"ui-icon-gear", iconPosition: "top"});
+            });
+        </script>
+    </body>
+</html>
+                
