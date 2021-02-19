@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            body{
+                background-color: black;
+            }
+            #redimensionable{
+                width: 120px;
+                height: 120px;
+                padding: 1em;
+                margin: 10px;
+            }
+            h3{
+                text-align: center;
+                padding: 1em;
+            }
+            #contenedor{
+                width: 300px;
+                height: 300px;
+                padding: 0.5em;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contenedor" class="ui-widget-content">
+            <h3 class="ui-widget-header">Contenedor</h3>
+            <div id="redimensionable" class="ui-state-active">
+                <h3 class="ui-widget-header">Redimen</h3>
+            </div>
+        </div>
+        <script>
+            $(function(){   
+               $("#redimensionable").resizable({
+                    /* maxHeight:400,
+                    maxWidth:400,*/
+                    minWidth:200,
+                    minHeight:200,
+                    ghost:true,
+                    containment:"#contenedor"
+                }); //Resimensiona
+            });
+        </script>
+    </body>
+</html>

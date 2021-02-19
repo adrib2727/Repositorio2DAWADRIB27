@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            #ordenable, #ordenable2{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 40%;
+            }
+            #ordenable li, #ordenable2 li{
+                margin: 0 4px 4px 4px;
+                padding: 0.4em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Lista 1</h2>
+        <ul id="ordenable" class="unir">
+            <li class="ui-state-default"><span class="valor">Elemento 67</span></li>
+            <li class="ui-state-default"><span class="valor">Elemento 432</span></li>
+            <li class="ui-state-default"><span class="valor">Elemento 8</span></li>
+            <li class="ui-state-default"><span class="valor">Elemento 1</span></li>
+            <li class="ui-state-default"><span class="valor">Elemento 5</span></li>
+            <li class="ui-state-default"><span class="valor">Elemento 15</span></li>
+            <li class="ui-state-default"><span class="valor">Elemento 45</span></li>
+            <li class="ui-state-default"><span class="valor">Elemento 7</span></li>
+            <button>Ordenar</button>
+        </ul>
+
+        <script>
+            $(function(){   
+                $("#ordenable").sortable();
+                $("#ordenable").disableSelection();
+                $("button").on("click", function(){
+                    var lista = $("#ordenable");
+                    var listaLi = lista.children("li").get();
+
+                    listaLi.sort(function(a, b){
+                        let A = $(".valor", a).text().toUpperCase();
+                        let B = $(".valor", b).text().toUpperCase();
+
+                        return A.localeCompare(B);
+                        
+                    });
+                    lista.children("li").remove();
+                    lista.append(listaLi);
+                    /* $.each(listaLi, function(id, elemento){
+                        listaLi.append(elemento);
+                    }) */
+                });
+            });
+        </script>
+    </body>
+</html>

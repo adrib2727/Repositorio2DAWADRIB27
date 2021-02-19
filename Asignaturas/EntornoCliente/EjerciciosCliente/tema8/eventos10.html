@@ -46,7 +46,7 @@
 
         arrastrable.addEventListener("dragstart", ondragstart);
         function ondragstart(ev){
-            ev.dataTransfer.setData("text/plain", ev.target.id)
+            ev.dataTransfer.setData("text/plain", ev.target.id);
             ev.target.style.border = "2px dashed red";
         }
 

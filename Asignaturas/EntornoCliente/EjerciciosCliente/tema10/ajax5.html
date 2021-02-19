@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 20%;
+        }
+        button{
+            margin-top: 10px;
+            width: 50%;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="contenedor">
+        <h2 id="info"></h2>
+        <form action="https://jorgesanchez.net/servicios/validaNIF.php" method="POST">
+            <label for="nif">Escribe el NIF</label>
+            <input type="text" id="nif" name="nif">
+            <label for="nif">Escribe el DNI</label>
+            <input type="radio" id="dni" name="dni">
+            <label for="nif">Escribe el NIE</label>
+            <input type="radio" id="nie" name="nie">
+            <button>Validar</button>
+        </form>
+    </div>  
+    
+    <script>
+        let info = document.getElementById("info");
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit", ev => {
+            ev.preventDefault();
+            let data = new FormData(form);
+
+            fetch(form.getAttribute("action"),{
+                method: form.getAttribute("method"),
+                body:data
+            })
+            .then(res => {
+                if(res.ok){
+                    return res.json()
+                }else{
+                    throw new Error("Los datos no llegan bien");
+                }
+            })
+            .then(respuesta => {
+                if(respuesta.error.codigo == 0){
+                    info.style.backgroundColor = "blue";
+                }else{
+                    info.style.backgroundColor = "red";
+                }
+                console.log(respuesta);
+            })
+            .catch(err => {
+                console.log("Error ", err);
+            })
+        });
+
+        
+    </script>
+</body>
+</html>

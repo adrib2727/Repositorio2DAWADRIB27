@@ -1,0 +1,31 @@
+#cabecera{
+    background-color: black;
+    border-radius: 5px;
+    color: aliceblue;
+    text-align: center;
+    padding: 0.5px;
+}
+.tabla_anotadores{
+    display: flex;
+    margin-top: 50px;
+    border: 2px solid black;
+    justify-content: center;
+}
+#fila_cabecera{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: center;
+}
+.fila{
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    height: 50px;
+    justify-content: center;
+}
+.elemento{
+    text-align: center;
+    border: 2px solid black;
+    width: 100px;    
+}

@@ -1,0 +1,55 @@
+#contenedor{
+    justify-content: center;
+}
+#cabecera{
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+#contenedor_formulario{
+    display: flex;
+    border: 2px solid red;
+    justify-content: center;
+    margin-top: 100px;
+}
+#formulario{
+    display: flex;
+    border: 2px solid black;
+    margin-top: 20px;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+}
+#formulario_titulo{
+    text-align: center;
+}
+#div_fichero{
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 5px;
+}
+#contenedor_tabla{
+    border: 2px solid red;
+    padding: 20px;
+}
+.filas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid black;
+}
+span{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 20px;
+    width: 20%;
+    height: 40%;
+}

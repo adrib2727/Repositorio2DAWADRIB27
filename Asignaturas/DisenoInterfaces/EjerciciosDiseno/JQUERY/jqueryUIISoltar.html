@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            body{
+                background-color: black;
+            }
+            #draggable{
+                width: 150px;
+                height: 150px;
+                border: 2px solid black;
+                float: left;
+                margin: 10px;
+                padding: 1em;
+            }
+            #soltable{
+                width: 200px;
+                height: 200px;
+                border: 2px solid black;
+                float: left;
+                margin: 10px;
+                padding: 1em;
+            }
+            #nosoltable{
+                width: 150px;
+                height: 150px;
+                border: 2px solid black;
+                float: left;
+                margin: 10px;
+                padding: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="draggable" class="ui-widget-content">
+            <p>Sitio donde arrastrar</p>
+        </div>
+        <div id="soltable" class="ui-widget-header">
+            <p>Arrastrable</p>
+        </div>
+        <div id="nosoltable" class="ui-widget-content">
+            <p>No soltable</p>
+        </div>
+        <script>
+            $(function(){   
+                $("#draggable").draggable();
+                $("#nosoltable").draggable();
+                $("#soltable").droppable({
+                    accept:"#draggable", 
+                    drop:function(event, ui){
+                       /*  $(this)
+                        .addClass("ui-state-highlight")
+                        .children()
+                        .text("Soltado"); */
+                        $(this)
+                        .addClass("ui-state-highlight")
+                        .find("p", $(this)).text("Soltado");
+                        ui.draggable.find("p").text("Lo acabas de soltar máquina");
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="examen.css">
+    <title>Examen 2º Ev</title>
+</head>
+<body>
+    <div id="contenedor">
+        <!-- CABECERA DEL DOCUMENTO -->
+        <div id="cabecera">
+            <h1>Gestión de citas</h1>
+        </div>
+        <!-- CONTENEDOR TABLA CITAS-->
+        <div id="contenedor_tabla">
+            <div id="tabla_citas">
+                <span id="span1"></span>
+                <span id="span2"></span>
+            </div>
+
+        </div>
+        <!-- CONTENEDOR DEL FORMULARIO -->
+        <div id="contenedor_formulario">
+            <div id="formulario">
+                <div id="formulario_titulo">
+                    <h2>Nueva cita</h2>
+                </div>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre">
+                <label for="telefono">Teléfono</label>
+                <input type="text" id="telefono">
+                <label for="cliente">Cliente</label>
+                <input type="checkbox">
+                <div id="div_fichero">
+                    <label for="fichero"></label>
+                    <input type="file" id="fichero">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script type="module">
+        import * as funciones from './funciones.js';
+        /* Pintar tabla de las citas en el HTML */
+        /*Se creará un array con la hora y los nombres de la semana para 
+        después representarlo en el HTML.
+        Seguidamente se creará otro array con las horas del panel izquierdo.*/
+        let DiasSemana = ["Hora", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+        let Horas = ["09:00 - 09:30", "09:30 - 10:00", "10:00 - 10:30", "16:00 - 16:30", "16:30 - 17:00"];
+        let contadorFilas = 0;
+        let contador = 0;
+
+        let contenedor_tabla = document.getElementById("contenedor_tabla");
+        let nuevoSpan = document.createElement("span");
+
+        /*He intentado hacer la tabla de esta manera, pero puesto que los
+        span se me ponian como querían, he dicidido dejar en el documento
+        dos contenedores y segir con el programa, espero que sirva de 
+        algo lo que está comentado.*/
+        /* for(contadorFilas; contadorFilas < 6; contadorFilas++){
+           
+            let fila = document.createElement("div");
+            fila.classList.add("fila");
+            for(contador = 0; contador < 6; contador++){
+                let span = document.createElement("span");
+                fila.appendChild(span);
+                console.log(span);
+            }
+            contenedor_tabla.appendChild(fila);
+            console.log(fila);
+        } */
+
+        /*Este span es el que se crea y a su vez el que
+        después podrá ser arrastrable*/
+        let span = document.getElementById("span1");
+        /*Destino del arrastrable*/
+        let destino = document.getElementById("span2");
+
+        /*Evento en el cual al aplicar la información en el formulario se añade el span*/
+        span.addEventListener("click", () => {
+            let nombre = document.getElementById("nombre");
+            let telefono = document.getElementById("telefono");
+
+            let parrafo1 = document.createElement("p");
+            parrafo1.innerHTML = nombre.value;
+            span.appendChild(parrafo1);
+
+            let parrafo2 = document.createElement("p");
+            parrafo2.innerHTML = telefono.value;
+            span.appendChild(parrafo2);
+            
+            span.style.backgroundColor = "orangered";
+        });
+
+        
+
+        span.addEventListener("dragstart", (ev) => {
+            ev.dataTransfer.setData("text/plain", ev.target.id);
+            ev.target.style.border = "2px dashed red";
+        });
+
+        destino.addEventListener("dragover", (ev) => {
+            ev.preventDefault();
+        });
+
+        /*Evento soltar*/
+        destino.addEventListener("drop", (ev) => {
+            let id = ev.dataTransfer.getData("text");
+            let viajero = document.getElementById(id);
+            let dondeSuelto = ev.target;
+            
+            dondeSuelto.appendChild(viajero);
+            ev.dataTransfer(dondeSuelto);
+        });
+    </script>
+</body>
+</html>

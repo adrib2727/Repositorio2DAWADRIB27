@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            body{
+                background-color: black;
+            }
+            #draggable{
+                width: 15em;
+                padding: 1em;
+            }
+            #draggable ul li{
+                margin: 1em 0;
+                padding: 0.5em 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ui-widget ui-widget-content" id="draggable">
+            <p>Infomación de arrastre</p>
+            <ul class="ui-helper-reset">
+                <li id="evento-start" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-play"></span><span class="contador"></span> Veces</li>
+                <li id="evento-drag" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-arrow"></span><span class="contador"></span> Veces</li>
+                <li id="evento-stop" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-stop"></span><span class="contador"></span> Veces</li>
+            </ul>
+        </div>
+        <script>
+            var $li_start = $("#evento-start"),
+            $li_drag = $("#evento-drag"),
+            $li_stop = $("#evento-stop");
+            var contador = [0,0,0];
+
+            $(function(){   
+                $("#draggable").draggable({
+                    start:function(){
+                        contador[0]++;
+                        actualizarEstadoContadores(contador[0], $li_start); 
+                    },
+                    drag:function(){
+                        contador[1]++;
+                        actualizarEstadoContadores(contador[1], $li_drag);
+                    },
+                    stop:function(){
+                        contador[2]++;
+                        actualizarEstadoContadores(contador[2], $li_stop);
+                    }
+                });
+                function actualizarEstadoContadores(nuevoContador, $elementoActualizado){
+                    $("span.contador", $elementoActualizado).text(nuevoContador);
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            body{
+                background-color: black;
+            }
+            h3{
+                color: white;
+            }
+            #seleccionable{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 50%;
+            }
+            #seleccionable .ui-selecting{
+                background-color: orange;
+            }
+            #seleccionable .ui-selected{
+                background-color: orangered;
+                color: white;
+            }
+            li{
+                padding: 0.3em;
+                margin-bottom: 0.2em;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Has seleccionado el <span id="lista">Ninguno</span></h3>
+        <ol id="seleccionable">
+            <li class="ui-widget-content">Elemento 1</li>
+            <li class="ui-widget-content">Elemento 2</li>
+            <li class="ui-widget-content">Elemento 3</li>
+            <li class="ui-widget-content">Elemento 4</li>
+            <li class="ui-widget-content">Elemento 5</li>
+            <li class="ui-widget-content">Elemento 6</li>
+        </ol>
+        <script>
+            $(function(){   
+                $("#seleccionable").selectable({
+                    stop:function(){
+                        $("#lista").empty();
+                        let $elementos = $(".ui-selected", this);
+
+                        for(let elemento of $elementos){
+                            $("#lista").append(" "+elemento.textContent);
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

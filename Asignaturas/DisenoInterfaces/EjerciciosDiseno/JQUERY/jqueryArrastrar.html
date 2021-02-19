@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            .draggable{
+                width: 90px;
+                height: 90px;
+                padding: 0.5em;
+                margin: 0 10px 10px 0;
+                float: left;
+            }
+            h3{
+                clear: left;
+            }
+            #dragabley{
+                cursor: e-resize;
+            }
+            #dragablex{
+                cursor: n-resize;
+            }
+            #contenedor{
+                width: 1000px;
+                height: 400px;
+                border: 2px solid orange;
+                padding: 1px;
+                background-color: lightcyan;
+            }
+            #dragables{
+
+            }
+        </style>
+    </head>
+    <body>
+        <h3>Arrastrar donde quieras</h3>
+        <div id="draggable1" class="draggable ui-widget-content">
+            <p>Arrastrable simple</p>
+        </div>
+        <h3>Arrastrar de arriba a abajo</h3>
+        <div id="draggablex" class="draggable ui-widget-content">
+            <p>Solo vertical</p>
+        </div>
+        <h3>Arrastrar de izquierda a derecha</h3>
+        <div id="draggabley" class="draggable ui-widget-content">
+            <p>Solo horizontal</p>
+        </div>
+        <h3>Perimetrar en Pandemia</h3>
+        <div id="contenedor">
+            <div id="draggable2" class="draggable ui-widget-content">
+                <p><strong>Arrastrable simple</strong></p>
+            </div>
+            <div  class="draggable ui-widget-content">
+                <p id="draggable3"><strong>Arrastrable simple</strong></p>
+            </div>
+        </div>
+        <script>
+            $(function(){   
+                $("#draggable1").draggable();
+                $("#draggablex").draggable({axis:"y"});
+                $("#draggabley").draggable({axis:"x"});
+                $("#draggable2").draggable({containment:"#contenedor"});
+                $("#draggable3").draggable({containment:"parent"});
+            });
+        </script>
+    </body>
+</html>
+                

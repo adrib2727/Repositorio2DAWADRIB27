@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            #ordenable, #ordenable2{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                width: 40%;
+            }
+            #ordenable li, #ordenable2 li{
+                margin: 0 4px 4px 4px;
+                padding: 0.4em;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Lista 1</h2>
+        <ul id="ordenable" class="unir">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 1</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 2</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 3</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 4</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 5</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 6</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 7</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrow"></span>Elemento 8</li>
+        </ul>
+
+        <h2>Lista 2</h2>
+        <ul id="ordenable2" class="unir">
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 1</li>
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 2</li>
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 3</li>
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 4</li>
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 5</li>
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 6</li>
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 7</li>
+            <li class="ui-state-highlight"><span class="ui-icon ui-icon-arrow"></span>Elemento 8</li>
+        </ul>
+        <script>
+            $(function(){   
+                $("#ordenable, #ordenable2").sortable({
+                    connectWith:".unir",
+                    placeholder:"ui-state-highlight"
+                });
+                $("#ordenable").disableSelection();
+            });
+        </script>
+    </body>
+</html>

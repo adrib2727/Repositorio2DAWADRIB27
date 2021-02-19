@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax 1</title>
+</head>
+<body>
+    <h2 id="info"></h2>
+    <script>
+        let info  = document.getElementById("info");
+        let data = new FormData();
+        data.append('n', 10);
+        data.append("tipo", "nie");
+
+        fetch('https://jorgesanchez.net/servicios/nifaleatorio.php', {
+            method:"POST",
+            body:data
+        })
+        .then(res => {
+            if(res.ok){
+                return res.json()
+            }else{
+                throw new Error("Los datos no llegan bien");
+            }
+        })
+        .then(listaNif => {
+            console.log(listaNif);
+        })
+        .catch(err => {
+            console.log("Error"+ err);
+        });
+    </script>
+    
+</body>
+</html>
