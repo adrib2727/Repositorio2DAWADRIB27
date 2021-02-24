@@ -9,66 +9,144 @@
         <link rel="stylesheet" href="//resources/demos/style.css">
         <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <style>
+            #contenedor_ui{
+                /* border: 2px solid black; */
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                padding: 10px;
+            }
+            #banquillo{
+                border-radius: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                background-color: lightslategrey;
+            }
+            #campo{
+                background-color: lightslategray;
+                border-radius: 5px;
+                border: 2px solid black;
+                padding: 30px;
+                margin-left: 10%;
+                text-align: center;
+            }
+            #cabecera{
+                background-color: black;
+                border-radius: 5px;
+                color: aliceblue;
+                text-align: center;
+                padding: 0.5px;
+            }
+            ul{
+                padding: 0px;
+                min-height: 20px;
+            }
+            li{
+                text-align: center;
+                margin: 5px;
+                height: 20px;
+                width: 100px;
+            }
+            h1{
+                margin-top: 0px;
+            }
+            #contenedorBoton{
+                display: flex;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            #contenedorBoton button{
+                height: 50px;
+                width: 150px;
+                font-size: 18px;
+                border: 1px solid black;
+                background-color: lightskyblue;
+                border-radius: 3px;
+            }
+        </style>
     </head>
     <body>
         <div id="contenedor">
             <div id="cabecera">
                 <h1>Anotadores</h1>
             </div>
-            <div id="tabla_anotadores">
-                <div id="fila_cabecera">
-                    <span class="elemento">Hora</span>
-                    <span class="elemento">Lunes</span>
-                    <span class="elemento">Martes</span>
-                    <span class="elemento">Miercoles</span>
-                    <span class="elemento">Jueves</span>
-                    <span class="elemento">Viernes</span>
+            <div id="contenedor_ui">
+                <div id="banquillo">
+                    <h1>Banquillo</h1>
+                    <ul type="none" id="sortable1" class="unir">
+                        <li></li>
+                    </ul>
                 </div>
-                <div class="fila">
-                    <span class="elemento">Hora</span>
-                    <span class="elemento">Lunes</span>
-                    <span class="elemento">Martes</span>
-                    <span class="elemento">Miercoles</span>
-                    <span class="elemento">Jueves</span>
-                    <span class="elemento">Viernes</span>
+                <div id="campo">
+                    <h1>Pista</h1>
+                    <ul type="none" id="sortable2" class="unir">
+                        <li class="ui-state-highlight">Jugador 1</li>
+                        <li class="ui-state-highlight">Jugador 2</li>
+                        <li class="ui-state-highlight">Jugador 3</li>
+                        <li class="ui-state-highlight">Jugador 4</li>
+                        <li class="ui-state-highlight">Jugador 5</li>
+                    </ul>
                 </div>
-                <div class="fila">
-                    <span class="elemento">Hora</span>
-                    <span class="elemento">Lunes</span>
-                    <span class="elemento">Martes</span>
-                    <span class="elemento">Miercoles</span>
-                    <span class="elemento">Jueves</span>
-                    <span class="elemento">Viernes</span>
+                <div id="dialogo" title="Añadir puntos">
+                    <form id="formulario">
+                        <p>
+                            <label for="1punto">1 punto</label>
+                            <input type="radio" id="1punto">
+                        </p>
+                        <p>
+                            <label for="2punto">2 puntos</label>
+                            <input type="radio" id="2punto">
+                        </p>
+                        <p>
+                            <label for="3punto">3 puntos</label>
+                            <input type="radio" id="3punto">
+                        </p>
+                        <p>
+                            <label for="masdatos">Datos adicionales</label>
+                            <input type="text" id="masdatos">
+                        </p>
+                        <button>Añadir</button>
+                    </form>
                 </div>
-                <div class="fila">
-                    <span class="elemento">Hora</span>
-                    <span class="elemento">Lunes</span>
-                    <span class="elemento">Martes</span>
-                    <span class="elemento">Miercoles</span>
-                    <span class="elemento">Jueves</span>
-                    <span class="elemento">Viernes</span>
-                </div>
-                <div class="fila">
-                    <span class="elemento">Hora</span>
-                    <span class="elemento">Lunes</span>
-                    <span class="elemento">Martes</span>
-                    <span class="elemento">Miercoles</span>
-                    <span class="elemento">Jueves</span>
-                    <span class="elemento">Viernes</span>
-                </div>
-                <div class="fila">
-                    <span class="elemento">Hora</span>
-                    <span class="elemento">Lunes</span>
-                    <span class="elemento">Martes</span>
-                    <span class="elemento">Miercoles</span>
-                    <span class="elemento">Jueves</span>
-                    <span class="elemento">Viernes</span>
+                <div id="anadirJugadores" title="Añadir jugador"> 
+                    <form>
+                        <p>
+                            <label for="nombre">Nombre del jugador</label>
+                            <input type="text">
+                        </p>
+                    </form>
                 </div>
             </div>
+            <div id="contenedorBoton">
+                <button id="anadir"><strong>Añadir jugador</strong></button>
+            </div>
+            
         </div>
         <script>
-            $(function(){   
-               
+            $(function(){
+                $("#sortable1, #sortable2").sortable({
+                    connectWith:".unir"
+                });
+                $("#sortable1").disableSelection();
+
+                /*Creación del dialog para los puntos*/
+                $("#dialogo").dialog({
+                    autoOpen:false
+                });
+                /*Creación del dialog para añadir un jugador*/
+                $("#anadirJugadores").dialog({
+                    autoOpen:false
+                });
+                /*Al clickar el jugador se abre*/
+                $(".ui-state-highlight").click(() => {
+                    $("#dialogo").dialog("open");
+                });
+                /*Al clickar sobre el boton azul aparece el dialog*/
+                $("#anadir").click(() => {
+                    $("#anadirJugadores").dialog("open");
+                })
+                
             });
         </script>
     </body>

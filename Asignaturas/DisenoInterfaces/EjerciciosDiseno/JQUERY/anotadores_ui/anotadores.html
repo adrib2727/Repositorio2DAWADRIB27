@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="anotadores.css">
+        <title>JQuery UI</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="//resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div id="contenedor">
+            <div id="cabecera">
+                <h1>Anotadores</h1>
+            </div>
+            <div id="contenedor_ui">
+                <div id="banquillo">
+                    <h1>Pista</h1>
+                    <div class="fila">
+                        <span>Nombre del jugador</span>
+                        <span>Dorsal</span>
+                        <span>Puntos</span>
+                    </div>
+                    <ul type="none" id="sortable1" class="unir"></ul>
+                </div>
+                <div id="campo">
+                    <h1>Banquillo</h1>
+                    <div class="fila">
+                        <span>Nombre del jugador</span>
+                        <span>Dorsal</span>
+                        <span>Puntos</span>
+                    </div>
+                    <ul type="none" id="sortable2" class="unir">
+                        <li></li>
+                    </ul>
+                </div>
+                <div id="dialogo" title="Añadir puntos">
+                    <form id="formulario">
+                      <!--   <p>
+                            <label for="nombre">Nombre del jugador</label>
+                            <input type="text" id="nombre">
+                        </p>
+                        <p>
+                            <label for="dorsal">2 puntos</label>
+                            <input type="text" id="dorsal">
+                        </p>
+                        <button>Añadir</button> -->
+                    </form>
+                </div>
+                <div id="anadirJugadores" title="Añadir jugador"> 
+                    <form>
+                        <p>
+                            <label for="nombre">Nombre del jugador</label>
+                            <input type="text" id="nombre">
+                        </p>
+                        <p>
+                            <label for="dorsal">Número del dorsal</label>
+                            <input type="text" id="dorsal">
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div id="contenedorBoton">
+                <button id="anadir"><strong>Añadir jugador</strong></button>
+            </div>
+            
+        </div>
+        <script>
+            $(function(){
+                $("#sortable1, #sortable2").sortable({
+                    connectWith:".unir"
+                });
+                $("#sortable1").disableSelection();
+
+                /*Creación del dialog para los puntos*/
+                $("#dialogo").dialog({
+                    autoOpen:false
+                });
+                /*Creación del dialog para añadir un jugador*/
+                $("#anadirJugadores").dialog({
+                    autoOpen:false,
+                    buttons: {
+                        "Añadir": function() {
+                            let nombre = $("#nombre").val();
+                            alert(nombre);
+                            $("#sortable1").append(`<li><span>${nombre}</span><span>${$('#dorsal').val()}</span><span class='puntos'>0</span></li>`);
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                });
+                /*Al clickar el jugador se abre*/
+                $(".ui-state-highlight").click(() => {
+                    $("#dialogo").dialog("open");
+                });
+                /*Al clickar sobre el boton azul aparece el dialog*/
+                $("#anadir").click(() => {
+                    $("#anadirJugadores").dialog("open");
+                });
+
+
+              
+                /*Captura de la lista de banquillo*/
+                
+                
+            });
+        </script>
+    </body>
+</html>

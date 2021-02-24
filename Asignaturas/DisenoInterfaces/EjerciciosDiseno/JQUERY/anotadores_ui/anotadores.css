@@ -1,31 +1,47 @@
-#cabecera{
-    background-color: black;
-    border-radius: 5px;
-    color: aliceblue;
-    text-align: center;
-    padding: 0.5px;
+body{
+    font-family: 'Questrial', sans-serif;
+    background-color: lightgoldenrodyellow;
 }
-.tabla_anotadores{
-    display: flex;
-    margin-top: 50px;
-    border: 2px solid black;
-    justify-content: center;
-}
-#fila_cabecera{
+#contenedor_ui{
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    justify-content: space-around;
+}
+#cabecera{
+    text-align: center;
+    font-size: x-large;
+}
+#banquillo{
+    border: 1px solid black;
+    padding: 30px;
+    width: 25%;
+    text-align: center;
+    background-color: white;
+}
+#campo{
+    border: 1px solid black;
+    padding: 30px;
+    width: 25%;
+    text-align: center;
+    background-color: white;
+}
+#contenedorBoton{
+    display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 .fila{
     display: flex;
-    flex-direction: row;
-    margin: 5px;
-    height: 50px;
     justify-content: center;
 }
-.elemento{
-    text-align: center;
-    border: 2px solid black;
-    width: 100px;    
+.fila span{
+    border: 1px solid black;
+    padding: 10px;
 }
+ul{
+    padding: 0px;
+}
+li{
+    height: 30px;
+}
+

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="clasificacion_formula1.xsl"?>
+<F1>
+    <datosGranPremio>
+        <clasificacion logo="http://www.effettidesigns.com/wp-content/uploads/2017/12/F1-logo-red-on-white.jpg">BARCELONA</clasificacion>
+        <anyo>2021</anyo>
+        <bandera img="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/1920px-Flag_of_Spain.svg.png">ESPAÑA</bandera>
+        <participantes>20</participantes>
+        <twitter hashtag="SpanishGP"/>
+    </datosGranPremio>
+    <neumaticos>
+        <Tipo id_neumatico="1" logo="https://d3nv2arudvw7ln.cloudfront.net/images/global/32/890/blue-4505508953865.png">Luvia</Tipo>
+        <Tipo id_neumatico="2" logo="https://d3nv2arudvw7ln.cloudfront.net/images/global/263/189/green-4505508953587.png">Intermedio</Tipo>
+        <Tipo id_neumatico="3" logo="https://d3nv2arudvw7ln.cloudfront.net/images/global/86/79/red-parentesi-4505517435254.png">SuperBlando</Tipo>
+        <Tipo id_neumatico="4" logo="https://d3nv2arudvw7ln.cloudfront.net/images/global/435/683/yellow-parentesi-4505517436006.png">Blando</Tipo>
+        <Tipo id_neumatico="5" logo="https://d3nv2arudvw7ln.cloudfront.net/images/global/945/214/white-4505508892499.png">Medio</Tipo>
+        <Tipo id_neumatico="6" logo="https://soymotor.com/sites/default/files/usuarios/redaccion/portal/mmunoz/pirelli-2019-c1-f1-soymotor.jpg">Duro</Tipo>
+    </neumaticos>
+    <equipos>
+        <equipo id_equipo="1">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4149.jpg" color="grey">Mercedes</escuderia>
+            <pilotos>
+                <piloto id_piloto="1" info="https://resultados.as.com/resultados/ficha/deportista/lewis_hamilton/24341/">Lewis Hamilton</piloto>
+                <piloto id_piloto="2" info="https://resultados.as.com/resultados/ficha/deportista/valtteri_bottas/24352/">Valtteri Bottas</piloto>
+            </pilotos>
+        </equipo>    
+        <equipo id_equipo="2">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4145.jpg" color="red">Red Bull Racing</escuderia>
+            <pilotos>
+                <piloto id_piloto="3" info="https://resultados.as.com/resultados/ficha/deportista/max_verstappen/29210/">Max Verstappen</piloto>
+                <piloto id_piloto="4" info="https://resultados.as.com/resultados/ficha/deportista/alexander_albon/45040/">Alexander Albon</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="3">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4139.jpg?123" color="yellow">Ferrari</escuderia>
+            <pilotos>
+                <piloto id_piloto="5" info="https://resultados.as.com/resultados/ficha/deportista/sebastian_vettel/24343/">Sebastian Vettel</piloto>
+                <piloto id_piloto="6" info="https://resultados.as.com/resultados/ficha/deportista/charles_leclerc/35014/">Charles Leclerc</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="4">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4836.jpg" color="pink">Racing Point</escuderia>
+            <pilotos>
+                <piloto id_piloto="7" info="https://resultados.as.com/resultados/ficha/deportista/sergio_perez/24347/">Sergio Pérez Mendoza</piloto>
+                <piloto id_piloto="8" info="https://resultados.as.com/resultados/ficha/deportista/lance_stroll/37029/">Lance Stroll</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="5">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4144.jpg" color="blue">Williams</escuderia>
+            <pilotos>
+                <piloto id_piloto="9" info="https://resultados.as.com/resultados/ficha/deportista/george_russell/40416/">George Russell</piloto>
+                <piloto id_piloto="10" info="https://resultados.as.com/resultados/ficha/deportista/nicholas_latifi/45758/">Nicholas Latifi</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="6">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4140.jpg" color="Black">McLaren</escuderia>
+            <pilotos>
+                <piloto id_piloto="11" info="https://resultados.as.com/resultados/ficha/deportista/carlos_sainz_jr/29208/">Carlos Sainz Jr.</piloto>
+                <piloto id_piloto="12" info="https://resultados.as.com/resultados/ficha/deportista/lando_norris/43500/">Lando Norris</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="7">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4141.jpg" color="SlateBlue">AlphaTauri</escuderia>
+            <pilotos>
+                <piloto id_piloto="13" info="https://resultados.as.com/resultados/ficha/deportista/pierre_gasly/40185/">Pierre Gasly</piloto>
+                <piloto id_piloto="14" info="https://resultados.as.com/resultados/ficha/deportista/daniil_kvyat/24355/">Daniil Kvyat</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="8">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4277.jpg" color="SlateGray">Haas</escuderia>
+            <pilotos>
+                <piloto id_piloto="15" info="https://resultados.as.com/resultados/ficha/deportista/romain_grosjean/24344/">Romain Grosjean</piloto>
+                <piloto id_piloto="16" info="https://resultados.as.com/resultados/ficha/deportista/kevin_magnussen/24356/">Kevin Magnussen</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="9">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4142.jpg" color="Goldenrod">Renault</escuderia>
+            <pilotos>
+                <piloto id_piloto="17" info="https://resultados.as.com/resultados/ficha/deportista/daniel_ricciardo/24349/">Daniel Ricciardo</piloto>
+                <piloto id_piloto="18" info="https://resultados.as.com/resultados/ficha/deportista/nico_hulkenberg/24345/">Nico Hulkenberg</piloto>
+            </pilotos>
+        </equipo> 
+        <equipo id_equipo="10">
+            <escuderia logo="https://as01.epimg.net/img/comunes/fotos/fichas/equipos/large/4143.jpg?123" color="green">Alfa Romeo Racing</escuderia>
+            <pilotos>
+                <piloto id_piloto="19" info="https://resultados.as.com/resultados/ficha/deportista/kimi_raikkonen/24336/">Kimi Raikkonen</piloto>
+                <piloto id_piloto="20" info="https://resultados.as.com/resultados/ficha/deportista/antonio_giovinazzi/38959/">Antonio Giovinazzi</piloto>
+            </pilotos>
+        </equipo> 
+    </equipos>
+    <parrilla>
+        <posicion id_piloto="1">
+            <puesto>1</puesto>
+            <vueltas>15</vueltas>
+            <Q1 tiempo="76872">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q1>
+            <Q2 tiempo="76013">
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="75584">
+                <neumatico>3</neumatico>
+                <neumatico>3</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="2">
+            <puesto>2</puesto>
+            <vueltas>15</vueltas>
+            <Q1 tiempo="77243">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q1>
+            <Q2 tiempo="76002">
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="75643">
+                <neumatico>3</neumatico>
+                <neumatico>3</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="3">
+            <puesto>3</puesto>
+            <vueltas>15</vueltas>
+            <Q1 tiempo="77213">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q1>
+            <Q2 tiempo="76518">
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="76292">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="4">
+            <puesto>6</puesto>
+            <vueltas>18</vueltas>
+            <Q1 tiempo="77419">
+                <neumatico>4</neumatico>                
+            </Q1>
+            <Q2 tiempo="77163">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="77029">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q3>
+        </posicion> 
+         <posicion id_piloto="6">
+            <puesto>9</puesto>
+            <vueltas>18</vueltas>
+           <Q1 tiempo="77256">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="76953">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="77087">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="7">
+            <puesto>4</puesto>
+            <vueltas>15</vueltas>
+            <Q1 tiempo="77117">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q1>
+            <Q2 tiempo="76936">
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="76482">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="8">
+            <puesto>5</puesto>
+            <vueltas>15</vueltas>
+            <Q1 tiempo="77316">
+                <neumatico>4</neumatico>             
+            </Q1>
+            <Q2 tiempo="76666">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="76589">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="11">
+            <puesto>7</puesto>
+            <vueltas>17</vueltas>
+            <Q1 tiempo="77438">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="76876">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="77044">
+                <neumatico>4</neumatico>
+                <neumatico>3</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="12">
+            <puesto>8</puesto>
+            <vueltas>18</vueltas>
+             <Q1 tiempo="77577">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="77166">
+                <neumatico>4</neumatico>
+                <neumatico>3</neumatico>
+            </Q2>
+            <Q3 tiempo="77084">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q3>
+        </posicion> 
+       
+        <posicion id_piloto="13">
+            <puesto>10</puesto>
+            <vueltas>18</vueltas>
+            <Q1 tiempo="77356">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="76800">
+                <neumatico>4</neumatico>
+                <neumatico>3</neumatico>
+            </Q2>
+            <Q3 tiempo="77136">
+                <neumatico>3</neumatico>
+                <neumatico>4</neumatico>
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="5">
+            <puesto>11</puesto>
+            <vueltas>12</vueltas>
+            <Q1 tiempo="77573">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="77168">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="14">
+            <puesto>12</puesto>
+            <vueltas>12</vueltas>
+            <Q1 tiempo="77676">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="77192">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="17">
+            <puesto>13</puesto>
+            <vueltas>12</vueltas>
+            <Q1 tiempo="77667">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="77198">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="19">
+            <puesto>14</puesto>
+            <vueltas>12</vueltas>
+            <Q1 tiempo="77797">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="77386">
+                <neumatico>4</neumatico>
+                <neumatico>5</neumatico>
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="18">
+            <puesto>15</puesto>
+            <vueltas>12</vueltas>
+            <Q1 tiempo="77765">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="77567">
+                <neumatico>4</neumatico>
+                <neumatico>4</neumatico>
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="16">
+            <puesto>16</puesto>
+            <vueltas>6</vueltas>
+            <Q1 tiempo="77908">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="0">
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="17">
+            <puesto>17</puesto>
+            <vueltas>6</vueltas>
+            <Q1 tiempo="78089">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="0">
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="9">
+            <puesto>18</puesto>
+            <vueltas>9</vueltas>
+            <Q1 tiempo="78099">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>
+                <neumatico>2</neumatico>             
+            </Q1>
+            <Q2 tiempo="0">
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="10">
+            <puesto>19</puesto>
+            <vueltas>9</vueltas>
+           <Q1 tiempo="78532">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>  
+                <neumatico>2</neumatico>           
+            </Q1>
+            <Q2 tiempo="0">
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+        <posicion id_piloto="20">
+            <puesto>20</puesto>
+            <vueltas>6</vueltas>
+           <Q1 tiempo="78697">
+                <neumatico>4</neumatico> 
+                <neumatico>4</neumatico>            
+            </Q1>
+            <Q2 tiempo="0">
+            </Q2>
+            <Q3 tiempo="0">           
+            </Q3>
+        </posicion> 
+    </parrilla>
+</F1>
