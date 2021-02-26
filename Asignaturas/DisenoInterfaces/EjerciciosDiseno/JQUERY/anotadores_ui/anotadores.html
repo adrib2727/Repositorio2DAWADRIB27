@@ -21,16 +21,18 @@
                 <div id="banquillo">
                     <h1>Pista</h1>
                     <div class="fila">
-                        <span>Nombre del jugador</span>
+                        <span>Nombre</span>
                         <span>Dorsal</span>
                         <span>Puntos</span>
                     </div>
-                    <ul type="none" id="sortable1" class="unir"></ul>
+                    <ul type="none" id="sortable1" class="unir">
+
+                    </ul>
                 </div>
                 <div id="campo">
                     <h1>Banquillo</h1>
                     <div class="fila">
-                        <span>Nombre del jugador</span>
+                        <span>Nombre</span>
                         <span>Dorsal</span>
                         <span>Puntos</span>
                     </div>
@@ -40,15 +42,6 @@
                 </div>
                 <div id="dialogo" title="Añadir puntos">
                     <form id="formulario">
-                      <!--   <p>
-                            <label for="nombre">Nombre del jugador</label>
-                            <input type="text" id="nombre">
-                        </p>
-                        <p>
-                            <label for="dorsal">2 puntos</label>
-                            <input type="text" id="dorsal">
-                        </p>
-                        <button>Añadir</button> -->
                     </form>
                 </div>
                 <div id="anadirJugadores" title="Añadir jugador"> 
@@ -78,7 +71,15 @@
 
                 /*Creación del dialog para los puntos*/
                 $("#dialogo").dialog({
-                    autoOpen:false
+                    autoOpen:false,
+                    buttons: {
+                        "De1": function(){
+                            let puntos = $(".seleccionado");
+                           
+                            alert(puntos.html());
+
+                        }
+                    }
                 });
                 /*Creación del dialog para añadir un jugador*/
                 $("#anadirJugadores").dialog({
@@ -86,15 +87,14 @@
                     buttons: {
                         "Añadir": function() {
                             let nombre = $("#nombre").val();
-                            alert(nombre);
-                            $("#sortable1").append(`<li><span>${nombre}</span><span>${$('#dorsal').val()}</span><span class='puntos'>0</span></li>`);
+                            $("#sortable1").append(`<li class="fila"><span class="span_anadir">${nombre}</span><span class="span_anadir">${$('#dorsal').val()}</span><span class="span_anadir">0</span></li>`);
+                            $("#sortable1 :last-child").click((ev) => {
+                                ev.currentTarget.classList.add("seleccionado");
+                                $("#dialogo").dialog("open");
+                            });
                             $( this ).dialog( "close" );
                         }
                     }
-                });
-                /*Al clickar el jugador se abre*/
-                $(".ui-state-highlight").click(() => {
-                    $("#dialogo").dialog("open");
                 });
                 /*Al clickar sobre el boton azul aparece el dialog*/
                 $("#anadir").click(() => {
